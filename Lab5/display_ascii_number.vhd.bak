@@ -1,0 +1,7 @@
+entity display_ascii_number_cmpt is
+    port (
+        received_data_cmpt        : in std_logic_vector(7 downto 0);
+        received_data_valid_cmpt  : in std_logic;
+        number                    : out std_logic_vector(6 downto 0)
+    );
+end entity display_ascii_number_cmpt;

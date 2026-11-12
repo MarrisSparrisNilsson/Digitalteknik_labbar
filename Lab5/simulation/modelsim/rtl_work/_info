@@ -1,0 +1,196 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\martin\OneDrive\Documents\JU_online\Digitalteknik\Labbar\Lab5\simulation\modelsim
+Edisplay_ascii_number
+Z1 w1683548702
+Z2 DPx4 work 13 seven_seg_pkg 0 22 MOe`I1jGCkT4=ncMLgNTe0
+Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\martin\OneDrive\Documents\JU_online\Digitalteknik\Labbar\Lab5\simulation\modelsim
+Z7 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/display_ascii_number.vhd
+Z8 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/display_ascii_number.vhd
+l0
+L7
+V@0@E;:bAH2>>^bTgH`9DB0
+Z9 OV;C;10.1d;51
+32
+Z10 !s108 1683735848.091000
+Z11 !s90 -reportprogress|300|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/display_ascii_number.vhd|
+Z12 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/display_ascii_number.vhd|
+Z13 o-work work -O0
+Z14 tExplicit 1
+!s100 @SSG[c8Vo_UgQK3OQK5Yb3
+!i10b 1
+Artl
+R2
+R3
+R4
+R5
+Z15 DEx4 work 20 display_ascii_number 0 22 @0@E;:bAH2>>^bTgH`9DB0
+l18
+L16
+V3UHYfjhSG]jZd5KCRG5cD3
+!s100 P:@I8>FJZ`__Rd?1I5f]M0
+R9
+32
+R10
+R11
+R12
+R13
+R14
+!i10b 1
+Eheartbeat_led
+Z16 w1683026640
+R3
+R4
+R5
+R6
+Z17 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/heartbeat_led.vhd
+Z18 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/heartbeat_led.vhd
+l0
+L5
+VA[mdDER3[klFhm?<iPd]X2
+R9
+32
+Z19 !s108 1683735833.176000
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/heartbeat_led.vhd|
+Z21 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/heartbeat_led.vhd|
+R13
+R14
+!s100 Jkh`AjbKl;bGRU2?EN;561
+!i10b 1
+Artl
+R3
+R4
+R5
+Z22 DEx4 work 13 heartbeat_led 0 22 A[mdDER3[klFhm?<iPd]X2
+l24
+L13
+VzRg<>a4_kn:7`Xc>b2Yij0
+R9
+32
+R19
+R20
+R21
+R13
+R14
+!s100 m:j<jAU>ao0lBig1=AVRg1
+!i10b 1
+Eserial_uart
+Z23 w1682427731
+R4
+R5
+R6
+Z24 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/serial_uart_rtl.vhd
+Z25 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/serial_uart_rtl.vhd
+l0
+L18
+V5hdUXk]16QZhL_M4O5<hf2
+R9
+32
+Z26 !s108 1683735835.091000
+Z27 !s90 -reportprogress|300|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/serial_uart_rtl.vhd|
+Z28 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/serial_uart_rtl.vhd|
+R13
+R14
+!s100 LHE`A8I9JAkVOd5EOYf@`1
+!i10b 1
+Artl
+R4
+R5
+Z29 DEx4 work 11 serial_uart 0 22 5hdUXk]16QZhL_M4O5<hf2
+l83
+L40
+V5g`jfFdJAi;^0F^OZRTWP1
+R9
+32
+R26
+R27
+R28
+R13
+R14
+!s100 ;2QA3fbMRJKj>U^lmU[iT2
+!i10b 1
+Pseven_seg_pkg
+R3
+R4
+R5
+Z30 w1683548635
+R6
+Z31 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/seven_seg_pkg.vhd
+Z32 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/seven_seg_pkg.vhd
+l0
+L5
+VMOe`I1jGCkT4=ncMLgNTe0
+R9
+32
+b1
+Z33 !s108 1683735846.459000
+Z34 !s90 -reportprogress|300|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/seven_seg_pkg.vhd|
+Z35 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/seven_seg_pkg.vhd|
+R13
+R14
+!s100 7<F<d^Kd_hmInLg@?8`?d2
+!i10b 1
+Bbody
+R2
+R3
+R4
+R5
+l0
+L23
+VRi]mWa0:8gRi><3L:Ve;N1
+R9
+32
+R33
+R34
+R35
+R13
+R14
+nbody
+!s100 kbzLIlBGGG<VZHNN_A>462
+!i10b 1
+Etop_level
+Z36 w1683735804
+R3
+R4
+R5
+R6
+Z37 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd
+Z38 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd
+l0
+L6
+VVU99Dd4iF?m[5IoXd:RmV1
+!s100 9`SdOT0RbR7AQm5Z[4g<]3
+R9
+32
+!i10b 1
+Z39 !s108 1683735848.872000
+Z40 !s90 -reportprogress|300|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd|
+Z41 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd|
+R13
+R14
+Artl
+R2
+R15
+R22
+R29
+R3
+R4
+R5
+Z42 DEx4 work 9 top_level 0 22 VU99Dd4iF?m[5IoXd:RmV1
+l23
+L16
+Z43 VPSB0c4Nf4fb?D9=@Skmc`0
+Z44 !s100 [OzV<Z;n8E7IMiN1@ad>m2
+R9
+32
+!i10b 1
+R39
+R40
+R41
+R13
+R14

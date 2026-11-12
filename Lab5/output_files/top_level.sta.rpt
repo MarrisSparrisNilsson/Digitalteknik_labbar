@@ -1,0 +1,1137 @@
+TimeQuest Timing Analyzer report for top_level
+Tue Jun 06 11:44:32 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk_50'
+ 12. Slow Model Hold: 'clk_50'
+ 13. Slow Model Minimum Pulse Width: 'clk_50'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk_50'
+ 24. Fast Model Hold: 'clk_50'
+ 25. Fast Model Minimum Pulse Width: 'clk_50'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; top_level                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; clk_50     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                          ;
++-----------+-----------------+------------+-------------------------------------------------------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note                                                  ;
++-----------+-----------------+------------+-------------------------------------------------------+
+; 262.4 MHz ; 260.01 MHz      ; clk_50     ; limit due to high minimum pulse width violation (tch) ;
++-----------+-----------------+------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; clk_50 ; -2.811 ; -169.440      ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; clk_50 ; 0.391 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; clk_50 ; -1.423 ; -125.148             ;
++--------+--------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk_50'                                                                                                                                     ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.811 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.839      ;
+; -2.811 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.839      ;
+; -2.811 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.839      ;
+; -2.811 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.839      ;
+; -2.811 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.839      ;
+; -2.811 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.839      ;
+; -2.811 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.839      ;
+; -2.811 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.839      ;
+; -2.811 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.839      ;
+; -2.811 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.839      ;
+; -2.811 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.839      ;
+; -2.724 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.752      ;
+; -2.724 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.752      ;
+; -2.724 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.752      ;
+; -2.724 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.752      ;
+; -2.724 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.752      ;
+; -2.724 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.752      ;
+; -2.724 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.752      ;
+; -2.724 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.752      ;
+; -2.724 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.752      ;
+; -2.724 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.752      ;
+; -2.724 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.752      ;
+; -2.695 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.731      ;
+; -2.695 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.731      ;
+; -2.695 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.731      ;
+; -2.695 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.731      ;
+; -2.695 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.731      ;
+; -2.695 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.731      ;
+; -2.695 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.731      ;
+; -2.695 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.731      ;
+; -2.695 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.731      ;
+; -2.695 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.731      ;
+; -2.695 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.731      ;
+; -2.683 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.711      ;
+; -2.683 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.711      ;
+; -2.683 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.711      ;
+; -2.683 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.711      ;
+; -2.683 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.711      ;
+; -2.683 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.711      ;
+; -2.683 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.711      ;
+; -2.683 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.711      ;
+; -2.683 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.711      ;
+; -2.683 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.711      ;
+; -2.683 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.711      ;
+; -2.679 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.707      ;
+; -2.679 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.707      ;
+; -2.679 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.707      ;
+; -2.679 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.707      ;
+; -2.679 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.707      ;
+; -2.679 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.707      ;
+; -2.679 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.707      ;
+; -2.679 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.707      ;
+; -2.679 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.707      ;
+; -2.679 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.707      ;
+; -2.679 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 3.707      ;
+; -2.648 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.684      ;
+; -2.648 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.684      ;
+; -2.648 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.684      ;
+; -2.648 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.684      ;
+; -2.648 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.684      ;
+; -2.648 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.684      ;
+; -2.648 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.684      ;
+; -2.648 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.684      ;
+; -2.648 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.684      ;
+; -2.648 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.684      ;
+; -2.648 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.684      ;
+; -2.573 ; heartbeat_led:hearbeat_led|counter[0]  ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.609      ;
+; -2.537 ; heartbeat_led:hearbeat_led|counter[1]  ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.573      ;
+; -2.516 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.552      ;
+; -2.516 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.552      ;
+; -2.466 ; heartbeat_led:hearbeat_led|counter[2]  ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.502      ;
+; -2.465 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.501      ;
+; -2.465 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.501      ;
+; -2.465 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.501      ;
+; -2.465 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.501      ;
+; -2.465 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.501      ;
+; -2.465 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.501      ;
+; -2.465 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.501      ;
+; -2.465 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.501      ;
+; -2.465 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.501      ;
+; -2.465 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.501      ;
+; -2.465 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.501      ;
+; -2.429 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.465      ;
+; -2.429 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.465      ;
+; -2.420 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.456      ;
+; -2.420 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.456      ;
+; -2.420 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.456      ;
+; -2.420 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.456      ;
+; -2.420 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.456      ;
+; -2.420 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.456      ;
+; -2.420 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.456      ;
+; -2.420 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.456      ;
+; -2.420 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.456      ;
+; -2.420 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.456      ;
+; -2.420 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.456      ;
+; -2.413 ; heartbeat_led:hearbeat_led|counter[14] ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.449      ;
+; -2.413 ; heartbeat_led:hearbeat_led|counter[14] ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.449      ;
+; -2.413 ; heartbeat_led:hearbeat_led|counter[14] ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.449      ;
+; -2.413 ; heartbeat_led:hearbeat_led|counter[14] ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.449      ;
+; -2.413 ; heartbeat_led:hearbeat_led|counter[14] ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.449      ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk_50'                                                                                                                                                 ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; serial_uart:serial_uart|rx_bit_no[1]         ; serial_uart:serial_uart|rx_bit_no[1]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_bit_no[0]         ; serial_uart:serial_uart|rx_bit_no[0]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_bit_no[2]         ; serial_uart:serial_uart|rx_bit_no[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_state.s_rx_data   ; serial_uart:serial_uart|rx_state.s_rx_data   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_state.s_stop_bit  ; serial_uart:serial_uart|rx_state.s_stop_bit  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_state.s_idle      ; serial_uart:serial_uart|rx_state.s_idle      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[6]       ; serial_uart:serial_uart|rx_byte_int[6]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[5]       ; serial_uart:serial_uart|rx_byte_int[5]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[4]       ; serial_uart:serial_uart|rx_byte_int[4]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[3]       ; serial_uart:serial_uart|rx_byte_int[3]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[2]       ; serial_uart:serial_uart|rx_byte_int[2]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[1]       ; serial_uart:serial_uart|rx_byte_int[1]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[0]       ; serial_uart:serial_uart|rx_byte_int[0]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|received_error       ; serial_uart:serial_uart|received_error       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|tx_state.s_start_bit ; serial_uart:serial_uart|tx_state.s_start_bit ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|tx_bit_no[1]         ; serial_uart:serial_uart|tx_bit_no[1]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|tx_bit_no[2]         ; serial_uart:serial_uart|tx_bit_no[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|tx_bit_no[0]         ; serial_uart:serial_uart|tx_bit_no[0]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|tx_state.s_tx_data   ; serial_uart:serial_uart|tx_state.s_tx_data   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|tx_state.s_stop_bit  ; serial_uart:serial_uart|tx_state.s_stop_bit  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|tx_byte_saved[7]     ; serial_uart:serial_uart|tx_byte_saved[7]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; heartbeat_led:hearbeat_led|led               ; heartbeat_led:hearbeat_led|led               ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.522 ; serial_uart:serial_uart|rx_byte_int[1]       ; serial_uart:serial_uart|received_data[1]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.788      ;
+; 0.522 ; serial_uart:serial_uart|rx_byte_int[0]       ; serial_uart:serial_uart|received_data[0]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.788      ;
+; 0.524 ; serial_uart:serial_uart|rx_byte_int[1]       ; serial_uart:serial_uart|rx_byte_int[0]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.790      ;
+; 0.531 ; serial_uart:serial_uart|rx_byte_int[5]       ; serial_uart:serial_uart|rx_byte_int[4]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.797      ;
+; 0.536 ; serial_uart:serial_uart|rx_byte_int[3]       ; serial_uart:serial_uart|rx_byte_int[2]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.802      ;
+; 0.538 ; serial_uart:serial_uart|rx_bit_cnt[12]       ; serial_uart:serial_uart|rx_bit_cnt[12]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.804      ;
+; 0.549 ; serial_uart:serial_uart|tx_byte_saved[6]     ; serial_uart:serial_uart|tx_byte_saved[5]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.815      ;
+; 0.552 ; serial_uart:serial_uart|rx_2r                ; serial_uart:serial_uart|rx_byte_int[6]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.818      ;
+; 0.555 ; serial_uart:serial_uart|rx_2r                ; serial_uart:serial_uart|received_error       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.821      ;
+; 0.557 ; serial_uart:serial_uart|rx_state.s_stop_bit  ; serial_uart:serial_uart|rx_bit_no[0]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.823      ;
+; 0.558 ; serial_uart:serial_uart|rx_state.s_stop_bit  ; serial_uart:serial_uart|rx_bit_no[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.824      ;
+; 0.579 ; serial_uart:serial_uart|tx_state.s_tx_data   ; serial_uart:serial_uart|tx_bit_no[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.845      ;
+; 0.580 ; serial_uart:serial_uart|tx_state.s_tx_data   ; serial_uart:serial_uart|tx                   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.846      ;
+; 0.651 ; serial_uart:serial_uart|tx_byte_saved[7]     ; serial_uart:serial_uart|tx_byte_saved[6]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.917      ;
+; 0.659 ; serial_uart:serial_uart|tx_byte_saved[5]     ; serial_uart:serial_uart|tx_byte_saved[4]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.925      ;
+; 0.665 ; serial_uart:serial_uart|rx_bit_cnt_half      ; serial_uart:serial_uart|rx_bit_cnt_en        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.931      ;
+; 0.667 ; serial_uart:serial_uart|rx_byte_int[2]       ; serial_uart:serial_uart|received_data[2]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.933      ;
+; 0.668 ; serial_uart:serial_uart|rx_byte_int[4]       ; serial_uart:serial_uart|received_data[4]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.934      ;
+; 0.698 ; serial_uart:serial_uart|reset_r              ; serial_uart:serial_uart|reset_2r             ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.963      ;
+; 0.703 ; serial_uart:serial_uart|tx_bit_cnt[12]       ; serial_uart:serial_uart|tx_bit_cnt[12]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.969      ;
+; 0.704 ; heartbeat_led:hearbeat_led|counter[24]       ; heartbeat_led:hearbeat_led|counter[24]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.970      ;
+; 0.705 ; serial_uart:serial_uart|reset_2r             ; serial_uart:serial_uart|received_data[1]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.971      ;
+; 0.708 ; serial_uart:serial_uart|reset_2r             ; serial_uart:serial_uart|received_data[6]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.974      ;
+; 0.708 ; serial_uart:serial_uart|reset_2r             ; serial_uart:serial_uart|received_data[3]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.974      ;
+; 0.708 ; serial_uart:serial_uart|rx_byte_int[6]       ; serial_uart:serial_uart|rx_byte_int[5]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.974      ;
+; 0.711 ; serial_uart:serial_uart|reset_2r             ; serial_uart:serial_uart|received_data[5]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.977      ;
+; 0.712 ; serial_uart:serial_uart|rx_r                 ; serial_uart:serial_uart|rx_2r                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.978      ;
+; 0.716 ; serial_uart:serial_uart|tx_byte_saved[1]     ; serial_uart:serial_uart|tx_byte_saved[0]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.982      ;
+; 0.725 ; serial_uart:serial_uart|rx_2r                ; serial_uart:serial_uart|rx_bit_cnt_en        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.991      ;
+; 0.728 ; serial_uart:serial_uart|rx_2r                ; serial_uart:serial_uart|received_data_valid  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.994      ;
+; 0.732 ; serial_uart:serial_uart|tx_state.s_tx_data   ; serial_uart:serial_uart|tx_byte_saved[2]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.998      ;
+; 0.735 ; serial_uart:serial_uart|rx_bit_cnt[12]       ; serial_uart:serial_uart|rx_bit_cnt_wrap      ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 1.002      ;
+; 0.774 ; serial_uart:serial_uart|tx_bit_cnt_wrap      ; serial_uart:serial_uart|tx_state.s_stop_bit  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.040      ;
+; 0.777 ; serial_uart:serial_uart|tx_bit_cnt_wrap      ; serial_uart:serial_uart|tx_state.s_tx_data   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.043      ;
+; 0.781 ; serial_uart:serial_uart|tx_bit_cnt_wrap      ; serial_uart:serial_uart|tx_state.s_start_bit ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.047      ;
+; 0.782 ; serial_uart:serial_uart|tx_bit_cnt_wrap      ; serial_uart:serial_uart|tx_bit_cnt_en        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.048      ;
+; 0.791 ; serial_uart:serial_uart|tx_state.s_start_bit ; serial_uart:serial_uart|tx_state.s_tx_data   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.057      ;
+; 0.792 ; serial_uart:serial_uart|tx_byte_saved[4]     ; serial_uart:serial_uart|tx_byte_saved[3]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.058      ;
+; 0.797 ; serial_uart:serial_uart|tx_bit_cnt[0]        ; serial_uart:serial_uart|tx_bit_cnt[0]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.063      ;
+; 0.798 ; heartbeat_led:hearbeat_led|counter[5]        ; heartbeat_led:hearbeat_led|counter[5]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.064      ;
+; 0.798 ; serial_uart:serial_uart|tx_byte_saved[0]     ; serial_uart:serial_uart|tx                   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.064      ;
+; 0.799 ; heartbeat_led:hearbeat_led|counter[0]        ; heartbeat_led:hearbeat_led|counter[0]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; heartbeat_led:hearbeat_led|counter[3]        ; heartbeat_led:hearbeat_led|counter[3]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; serial_uart:serial_uart|rx_state.s_idle      ; serial_uart:serial_uart|rx_bit_cnt_en        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.065      ;
+; 0.799 ; serial_uart:serial_uart|tx_byte_saved[3]     ; serial_uart:serial_uart|tx_byte_saved[2]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.065      ;
+; 0.804 ; serial_uart:serial_uart|rx_2r                ; serial_uart:serial_uart|received_data[7]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.070      ;
+; 0.804 ; serial_uart:serial_uart|tx_bit_cnt[1]        ; serial_uart:serial_uart|tx_bit_cnt[1]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.070      ;
+; 0.804 ; serial_uart:serial_uart|rx_byte_int[3]       ; serial_uart:serial_uart|received_data[3]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.070      ;
+; 0.805 ; heartbeat_led:hearbeat_led|counter[14]       ; heartbeat_led:hearbeat_led|counter[14]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.071      ;
+; 0.805 ; serial_uart:serial_uart|rx_byte_int[5]       ; serial_uart:serial_uart|received_data[5]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806 ; serial_uart:serial_uart|rx_bit_cnt[1]        ; serial_uart:serial_uart|rx_bit_cnt[1]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; serial_uart:serial_uart|rx_bit_cnt[6]        ; serial_uart:serial_uart|rx_bit_cnt[6]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; serial_uart:serial_uart|tx_bit_cnt[2]        ; serial_uart:serial_uart|tx_bit_cnt[2]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; heartbeat_led:hearbeat_led|counter[7]        ; heartbeat_led:hearbeat_led|counter[7]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; heartbeat_led:hearbeat_led|counter[11]       ; heartbeat_led:hearbeat_led|counter[11]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806 ; heartbeat_led:hearbeat_led|counter[21]       ; heartbeat_led:hearbeat_led|counter[21]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.072      ;
+; 0.809 ; serial_uart:serial_uart|rx_bit_cnt[0]        ; serial_uart:serial_uart|rx_bit_cnt[0]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.075      ;
+; 0.809 ; serial_uart:serial_uart|tx_bit_cnt[9]        ; serial_uart:serial_uart|tx_bit_cnt[9]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.075      ;
+; 0.809 ; heartbeat_led:hearbeat_led|counter[23]       ; heartbeat_led:hearbeat_led|counter[23]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.075      ;
+; 0.810 ; serial_uart:serial_uart|rx_bit_cnt[10]       ; serial_uart:serial_uart|rx_bit_cnt[10]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; serial_uart:serial_uart|tx_bit_cnt[4]        ; serial_uart:serial_uart|tx_bit_cnt[4]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; serial_uart:serial_uart|tx_bit_cnt[7]        ; serial_uart:serial_uart|tx_bit_cnt[7]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; serial_uart:serial_uart|tx_bit_cnt[11]       ; serial_uart:serial_uart|tx_bit_cnt[11]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; heartbeat_led:hearbeat_led|counter[9]        ; heartbeat_led:hearbeat_led|counter[9]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810 ; heartbeat_led:hearbeat_led|counter[10]       ; heartbeat_led:hearbeat_led|counter[10]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.076      ;
+; 0.813 ; serial_uart:serial_uart|rx_bit_cnt[8]        ; serial_uart:serial_uart|rx_bit_cnt[8]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.079      ;
+; 0.814 ; serial_uart:serial_uart|rx_bit_cnt[3]        ; serial_uart:serial_uart|rx_bit_cnt[3]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.080      ;
+; 0.822 ; serial_uart:serial_uart|rx_bit_cnt_en        ; serial_uart:serial_uart|rx_bit_cnt_wrap      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.088      ;
+; 0.827 ; serial_uart:serial_uart|reset_2r             ; serial_uart:serial_uart|received_data[0]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.093      ;
+; 0.829 ; serial_uart:serial_uart|tx_state.s_tx_data   ; serial_uart:serial_uart|tx_byte_saved[5]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.095      ;
+; 0.829 ; serial_uart:serial_uart|tx_state.s_tx_data   ; serial_uart:serial_uart|tx_byte_saved[0]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.095      ;
+; 0.831 ; heartbeat_led:hearbeat_led|counter[1]        ; heartbeat_led:hearbeat_led|counter[1]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.097      ;
+; 0.831 ; heartbeat_led:hearbeat_led|counter[2]        ; heartbeat_led:hearbeat_led|counter[2]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.097      ;
+; 0.831 ; heartbeat_led:hearbeat_led|counter[4]        ; heartbeat_led:hearbeat_led|counter[4]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.097      ;
+; 0.831 ; serial_uart:serial_uart|rx_state.s_stop_bit  ; serial_uart:serial_uart|rx_bit_no[1]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.097      ;
+; 0.832 ; serial_uart:serial_uart|tx_byte_saved[2]     ; serial_uart:serial_uart|tx_byte_saved[1]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.098      ;
+; 0.835 ; serial_uart:serial_uart|tx_bit_cnt[8]        ; serial_uart:serial_uart|tx_bit_cnt[8]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835 ; serial_uart:serial_uart|tx_bit_cnt[10]       ; serial_uart:serial_uart|tx_bit_cnt[10]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.101      ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk_50'                                                                                                                                                                         ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                                                                                                         ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------+
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk_50 ; Rise       ; clk_50                                                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[0]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[0]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[10]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[10]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[11]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[11]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[12]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[12]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[13]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[13]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[14]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[14]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[15]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[15]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[16]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[16]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[17]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[17]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[18]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[18]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[19]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[19]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[1]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[1]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[20]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[20]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[21]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[21]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[22]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[22]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[23]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[23]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[24]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[24]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[2]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[2]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[3]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[3]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[4]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[4]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[5]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[5]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[6]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[6]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[7]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[7]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[8]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[8]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[9]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[9]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|led                                                                                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|led                                                                                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|tick                                                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|tick                                                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[0]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[0]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[1]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[1]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[2]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[2]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[3]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[3]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[4]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[4]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[5]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[5]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[6]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[6]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[7]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[7]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data_valid                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data_valid                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_error                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_error                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|reset_2r                                                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|reset_2r                                                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|reset_r                                                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|reset_r                                                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|rx_2r                                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|rx_2r                                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|rx_bit_cnt[0]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|rx_bit_cnt[0]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|rx_bit_cnt[10]                                                                                         ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset_n   ; clk_50     ; 4.579 ; 4.579 ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; 4.839 ; 4.839 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50     ; -4.349 ; -4.349 ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; -4.609 ; -4.609 ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; hex0[*]   ; clk_50     ; 10.255 ; 10.255 ; Rise       ; clk_50          ;
+;  hex0[0]  ; clk_50     ; 10.130 ; 10.130 ; Rise       ; clk_50          ;
+;  hex0[1]  ; clk_50     ; 9.907  ; 9.907  ; Rise       ; clk_50          ;
+;  hex0[2]  ; clk_50     ; 9.911  ; 9.911  ; Rise       ; clk_50          ;
+;  hex0[3]  ; clk_50     ; 10.195 ; 10.195 ; Rise       ; clk_50          ;
+;  hex0[4]  ; clk_50     ; 10.151 ; 10.151 ; Rise       ; clk_50          ;
+;  hex0[5]  ; clk_50     ; 10.190 ; 10.190 ; Rise       ; clk_50          ;
+;  hex0[6]  ; clk_50     ; 10.255 ; 10.255 ; Rise       ; clk_50          ;
+; ledr[*]   ; clk_50     ; 8.765  ; 8.765  ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 7.315  ; 7.315  ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 8.765  ; 8.765  ; Rise       ; clk_50          ;
+; uart_txd  ; clk_50     ; 8.120  ; 8.120  ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; hex0[*]   ; clk_50     ; 9.907  ; 9.907  ; Rise       ; clk_50          ;
+;  hex0[0]  ; clk_50     ; 10.130 ; 10.130 ; Rise       ; clk_50          ;
+;  hex0[1]  ; clk_50     ; 9.907  ; 9.907  ; Rise       ; clk_50          ;
+;  hex0[2]  ; clk_50     ; 9.911  ; 9.911  ; Rise       ; clk_50          ;
+;  hex0[3]  ; clk_50     ; 10.195 ; 10.195 ; Rise       ; clk_50          ;
+;  hex0[4]  ; clk_50     ; 10.151 ; 10.151 ; Rise       ; clk_50          ;
+;  hex0[5]  ; clk_50     ; 10.190 ; 10.190 ; Rise       ; clk_50          ;
+;  hex0[6]  ; clk_50     ; 10.255 ; 10.255 ; Rise       ; clk_50          ;
+; ledr[*]   ; clk_50     ; 7.315  ; 7.315  ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 7.315  ; 7.315  ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 8.765  ; 8.765  ; Rise       ; clk_50          ;
+; uart_txd  ; clk_50     ; 8.120  ; 8.120  ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; clk_50 ; -0.736 ; -27.963       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; clk_50 ; 0.215 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; clk_50 ; -1.423 ; -125.148             ;
++--------+--------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk_50'                                                                                                                                     ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.736 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.760      ;
+; -0.736 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.760      ;
+; -0.736 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.760      ;
+; -0.736 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.760      ;
+; -0.736 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.760      ;
+; -0.736 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.760      ;
+; -0.736 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.760      ;
+; -0.736 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.760      ;
+; -0.736 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.760      ;
+; -0.736 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.760      ;
+; -0.736 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.760      ;
+; -0.727 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.759      ;
+; -0.727 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.759      ;
+; -0.727 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.759      ;
+; -0.727 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.759      ;
+; -0.727 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.759      ;
+; -0.727 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.759      ;
+; -0.727 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.759      ;
+; -0.727 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.759      ;
+; -0.727 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.759      ;
+; -0.727 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.759      ;
+; -0.727 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.759      ;
+; -0.721 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.745      ;
+; -0.721 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.745      ;
+; -0.721 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.745      ;
+; -0.721 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.745      ;
+; -0.721 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.745      ;
+; -0.721 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.745      ;
+; -0.721 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.745      ;
+; -0.721 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.745      ;
+; -0.721 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.745      ;
+; -0.721 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.745      ;
+; -0.721 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.745      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.732      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.732      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.732      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.732      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.732      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.732      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.732      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.732      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.732      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.732      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.732      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.740      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.740      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.740      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.740      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.740      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.740      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.740      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.740      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.740      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.740      ;
+; -0.708 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.740      ;
+; -0.681 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.705      ;
+; -0.681 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.705      ;
+; -0.681 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.705      ;
+; -0.681 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.705      ;
+; -0.681 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.705      ;
+; -0.681 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.705      ;
+; -0.681 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.705      ;
+; -0.681 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.705      ;
+; -0.681 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.705      ;
+; -0.681 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.705      ;
+; -0.681 ; heartbeat_led:hearbeat_led|counter[6]  ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.705      ;
+; -0.662 ; heartbeat_led:hearbeat_led|counter[0]  ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.694      ;
+; -0.639 ; heartbeat_led:hearbeat_led|counter[1]  ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.671      ;
+; -0.605 ; heartbeat_led:hearbeat_led|counter[2]  ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.637      ;
+; -0.601 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.633      ;
+; -0.601 ; heartbeat_led:hearbeat_led|counter[7]  ; heartbeat_led:hearbeat_led|counter[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.633      ;
+; -0.600 ; heartbeat_led:hearbeat_led|counter[0]  ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.624      ;
+; -0.597 ; heartbeat_led:hearbeat_led|counter[0]  ; heartbeat_led:hearbeat_led|counter[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.629      ;
+; -0.593 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[21] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[23] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.593 ; heartbeat_led:hearbeat_led|counter[17] ; heartbeat_led:hearbeat_led|counter[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.625      ;
+; -0.592 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.008      ; 1.632      ;
+; -0.592 ; heartbeat_led:hearbeat_led|counter[15] ; heartbeat_led:hearbeat_led|counter[13] ; clk_50       ; clk_50      ; 1.000        ; 0.008      ; 1.632      ;
+; -0.586 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.618      ;
+; -0.586 ; heartbeat_led:hearbeat_led|counter[9]  ; heartbeat_led:hearbeat_led|counter[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.618      ;
+; -0.577 ; heartbeat_led:hearbeat_led|counter[1]  ; heartbeat_led:hearbeat_led|counter[24] ; clk_50       ; clk_50      ; 1.000        ; -0.008     ; 1.601      ;
+; -0.574 ; heartbeat_led:hearbeat_led|counter[1]  ; heartbeat_led:hearbeat_led|counter[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.606      ;
+; -0.573 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.605      ;
+; -0.573 ; heartbeat_led:hearbeat_led|counter[8]  ; heartbeat_led:hearbeat_led|counter[13] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.605      ;
+; -0.573 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[12] ; clk_50       ; clk_50      ; 1.000        ; 0.008      ; 1.613      ;
+; -0.573 ; heartbeat_led:hearbeat_led|counter[23] ; heartbeat_led:hearbeat_led|counter[13] ; clk_50       ; clk_50      ; 1.000        ; 0.008      ; 1.613      ;
+; -0.571 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[16] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[17] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[19] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.603      ;
+; -0.571 ; heartbeat_led:hearbeat_led|counter[19] ; heartbeat_led:hearbeat_led|counter[20] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.603      ;
++--------+----------------------------------------+----------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk_50'                                                                                                                                                 ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                    ; To Node                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; serial_uart:serial_uart|rx_bit_no[1]         ; serial_uart:serial_uart|rx_bit_no[1]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_bit_no[0]         ; serial_uart:serial_uart|rx_bit_no[0]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_bit_no[2]         ; serial_uart:serial_uart|rx_bit_no[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_state.s_rx_data   ; serial_uart:serial_uart|rx_state.s_rx_data   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_state.s_stop_bit  ; serial_uart:serial_uart|rx_state.s_stop_bit  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_state.s_idle      ; serial_uart:serial_uart|rx_state.s_idle      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[6]       ; serial_uart:serial_uart|rx_byte_int[6]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[5]       ; serial_uart:serial_uart|rx_byte_int[5]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[4]       ; serial_uart:serial_uart|rx_byte_int[4]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[3]       ; serial_uart:serial_uart|rx_byte_int[3]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[2]       ; serial_uart:serial_uart|rx_byte_int[2]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[1]       ; serial_uart:serial_uart|rx_byte_int[1]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[0]       ; serial_uart:serial_uart|rx_byte_int[0]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|received_error       ; serial_uart:serial_uart|received_error       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|tx_state.s_start_bit ; serial_uart:serial_uart|tx_state.s_start_bit ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|tx_bit_no[1]         ; serial_uart:serial_uart|tx_bit_no[1]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|tx_bit_no[2]         ; serial_uart:serial_uart|tx_bit_no[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|tx_bit_no[0]         ; serial_uart:serial_uart|tx_bit_no[0]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|tx_state.s_tx_data   ; serial_uart:serial_uart|tx_state.s_tx_data   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|tx_state.s_stop_bit  ; serial_uart:serial_uart|tx_state.s_stop_bit  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|tx_byte_saved[7]     ; serial_uart:serial_uart|tx_byte_saved[7]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; heartbeat_led:hearbeat_led|led               ; heartbeat_led:hearbeat_led|led               ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; serial_uart:serial_uart|rx_byte_int[1]       ; serial_uart:serial_uart|received_data[1]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; serial_uart:serial_uart|rx_byte_int[1]       ; serial_uart:serial_uart|rx_byte_int[0]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.394      ;
+; 0.243 ; serial_uart:serial_uart|rx_byte_int[0]       ; serial_uart:serial_uart|received_data[0]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.395      ;
+; 0.245 ; serial_uart:serial_uart|rx_byte_int[5]       ; serial_uart:serial_uart|rx_byte_int[4]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.397      ;
+; 0.246 ; serial_uart:serial_uart|rx_bit_cnt[12]       ; serial_uart:serial_uart|rx_bit_cnt[12]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.398      ;
+; 0.250 ; serial_uart:serial_uart|rx_byte_int[3]       ; serial_uart:serial_uart|rx_byte_int[2]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.402      ;
+; 0.256 ; serial_uart:serial_uart|tx_byte_saved[6]     ; serial_uart:serial_uart|tx_byte_saved[5]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.408      ;
+; 0.256 ; serial_uart:serial_uart|rx_2r                ; serial_uart:serial_uart|rx_byte_int[6]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.408      ;
+; 0.259 ; serial_uart:serial_uart|rx_state.s_stop_bit  ; serial_uart:serial_uart|rx_bit_no[0]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.411      ;
+; 0.259 ; serial_uart:serial_uart|rx_2r                ; serial_uart:serial_uart|received_error       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.411      ;
+; 0.260 ; serial_uart:serial_uart|rx_state.s_stop_bit  ; serial_uart:serial_uart|rx_bit_no[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.412      ;
+; 0.270 ; serial_uart:serial_uart|tx_state.s_tx_data   ; serial_uart:serial_uart|tx_bit_no[2]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.422      ;
+; 0.271 ; serial_uart:serial_uart|tx_state.s_tx_data   ; serial_uart:serial_uart|tx                   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.423      ;
+; 0.290 ; serial_uart:serial_uart|tx_byte_saved[7]     ; serial_uart:serial_uart|tx_byte_saved[6]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.442      ;
+; 0.295 ; serial_uart:serial_uart|rx_bit_cnt_half      ; serial_uart:serial_uart|rx_bit_cnt_en        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.447      ;
+; 0.295 ; serial_uart:serial_uart|tx_byte_saved[5]     ; serial_uart:serial_uart|tx_byte_saved[4]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.447      ;
+; 0.318 ; serial_uart:serial_uart|reset_r              ; serial_uart:serial_uart|reset_2r             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.470      ;
+; 0.320 ; serial_uart:serial_uart|tx_bit_cnt[12]       ; serial_uart:serial_uart|tx_bit_cnt[12]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.472      ;
+; 0.321 ; heartbeat_led:hearbeat_led|counter[24]       ; heartbeat_led:hearbeat_led|counter[24]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.473      ;
+; 0.321 ; serial_uart:serial_uart|rx_byte_int[6]       ; serial_uart:serial_uart|rx_byte_int[5]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.473      ;
+; 0.325 ; serial_uart:serial_uart|rx_byte_int[4]       ; serial_uart:serial_uart|received_data[4]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.477      ;
+; 0.325 ; serial_uart:serial_uart|rx_byte_int[2]       ; serial_uart:serial_uart|received_data[2]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.477      ;
+; 0.327 ; serial_uart:serial_uart|rx_r                 ; serial_uart:serial_uart|rx_2r                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.479      ;
+; 0.328 ; serial_uart:serial_uart|tx_byte_saved[1]     ; serial_uart:serial_uart|tx_byte_saved[0]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.480      ;
+; 0.333 ; serial_uart:serial_uart|rx_2r                ; serial_uart:serial_uart|rx_bit_cnt_en        ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.484      ;
+; 0.335 ; serial_uart:serial_uart|rx_bit_cnt[12]       ; serial_uart:serial_uart|rx_bit_cnt_wrap      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.487      ;
+; 0.335 ; serial_uart:serial_uart|rx_2r                ; serial_uart:serial_uart|received_data_valid  ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.486      ;
+; 0.345 ; serial_uart:serial_uart|reset_2r             ; serial_uart:serial_uart|received_data[6]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.497      ;
+; 0.346 ; serial_uart:serial_uart|reset_2r             ; serial_uart:serial_uart|received_data[3]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.498      ;
+; 0.347 ; serial_uart:serial_uart|reset_2r             ; serial_uart:serial_uart|received_data[1]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.499      ;
+; 0.348 ; serial_uart:serial_uart|reset_2r             ; serial_uart:serial_uart|received_data[5]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.500      ;
+; 0.348 ; serial_uart:serial_uart|tx_state.s_tx_data   ; serial_uart:serial_uart|tx_byte_saved[2]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.500      ;
+; 0.357 ; serial_uart:serial_uart|tx_bit_cnt[0]        ; serial_uart:serial_uart|tx_bit_cnt[0]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; heartbeat_led:hearbeat_led|counter[5]        ; heartbeat_led:hearbeat_led|counter[5]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; serial_uart:serial_uart|tx_state.s_start_bit ; serial_uart:serial_uart|tx_state.s_tx_data   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.510      ;
+; 0.359 ; heartbeat_led:hearbeat_led|counter[0]        ; heartbeat_led:hearbeat_led|counter[0]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.511      ;
+; 0.359 ; heartbeat_led:hearbeat_led|counter[3]        ; heartbeat_led:hearbeat_led|counter[3]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; serial_uart:serial_uart|rx_bit_cnt[1]        ; serial_uart:serial_uart|rx_bit_cnt[1]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; heartbeat_led:hearbeat_led|counter[7]        ; heartbeat_led:hearbeat_led|counter[7]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; heartbeat_led:hearbeat_led|counter[14]       ; heartbeat_led:hearbeat_led|counter[14]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; heartbeat_led:hearbeat_led|counter[21]       ; heartbeat_led:hearbeat_led|counter[21]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; serial_uart:serial_uart|tx_byte_saved[4]     ; serial_uart:serial_uart|tx_byte_saved[3]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; serial_uart:serial_uart|tx_byte_saved[0]     ; serial_uart:serial_uart|tx                   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; serial_uart:serial_uart|rx_bit_cnt[0]        ; serial_uart:serial_uart|rx_bit_cnt[0]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; serial_uart:serial_uart|rx_bit_cnt[6]        ; serial_uart:serial_uart|rx_bit_cnt[6]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; serial_uart:serial_uart|tx_bit_cnt[1]        ; serial_uart:serial_uart|tx_bit_cnt[1]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; serial_uart:serial_uart|tx_bit_cnt[9]        ; serial_uart:serial_uart|tx_bit_cnt[9]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362 ; heartbeat_led:hearbeat_led|counter[23]       ; heartbeat_led:hearbeat_led|counter[23]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; serial_uart:serial_uart|rx_bit_cnt[10]       ; serial_uart:serial_uart|rx_bit_cnt[10]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; serial_uart:serial_uart|tx_bit_cnt[2]        ; serial_uart:serial_uart|tx_bit_cnt[2]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; serial_uart:serial_uart|tx_bit_cnt[4]        ; serial_uart:serial_uart|tx_bit_cnt[4]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; serial_uart:serial_uart|tx_bit_cnt[7]        ; serial_uart:serial_uart|tx_bit_cnt[7]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; serial_uart:serial_uart|tx_bit_cnt[11]       ; serial_uart:serial_uart|tx_bit_cnt[11]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; heartbeat_led:hearbeat_led|counter[9]        ; heartbeat_led:hearbeat_led|counter[9]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; heartbeat_led:hearbeat_led|counter[10]       ; heartbeat_led:hearbeat_led|counter[10]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; heartbeat_led:hearbeat_led|counter[11]       ; heartbeat_led:hearbeat_led|counter[11]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; serial_uart:serial_uart|rx_bit_cnt[3]        ; serial_uart:serial_uart|rx_bit_cnt[3]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.516      ;
+; 0.364 ; serial_uart:serial_uart|rx_bit_cnt[8]        ; serial_uart:serial_uart|rx_bit_cnt[8]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365 ; serial_uart:serial_uart|tx_byte_saved[3]     ; serial_uart:serial_uart|tx_byte_saved[2]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366 ; serial_uart:serial_uart|tx_bit_cnt_wrap      ; serial_uart:serial_uart|tx_state.s_stop_bit  ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.517      ;
+; 0.367 ; serial_uart:serial_uart|rx_state.s_idle      ; serial_uart:serial_uart|rx_bit_cnt_en        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; serial_uart:serial_uart|rx_byte_int[3]       ; serial_uart:serial_uart|received_data[3]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368 ; serial_uart:serial_uart|rx_byte_int[5]       ; serial_uart:serial_uart|received_data[5]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369 ; serial_uart:serial_uart|tx_bit_cnt[8]        ; serial_uart:serial_uart|tx_bit_cnt[8]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; serial_uart:serial_uart|tx_bit_cnt[10]       ; serial_uart:serial_uart|tx_bit_cnt[10]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; heartbeat_led:hearbeat_led|counter[1]        ; heartbeat_led:hearbeat_led|counter[1]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; heartbeat_led:hearbeat_led|counter[4]        ; heartbeat_led:hearbeat_led|counter[4]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; heartbeat_led:hearbeat_led|counter[20]       ; heartbeat_led:hearbeat_led|counter[20]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; heartbeat_led:hearbeat_led|counter[22]       ; heartbeat_led:hearbeat_led|counter[22]       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; serial_uart:serial_uart|tx_bit_cnt_wrap      ; serial_uart:serial_uart|tx_state.s_tx_data   ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.520      ;
+; 0.370 ; heartbeat_led:hearbeat_led|counter[2]        ; heartbeat_led:hearbeat_led|counter[2]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.522      ;
+; 0.371 ; heartbeat_led:hearbeat_led|counter[6]        ; heartbeat_led:hearbeat_led|counter[6]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; serial_uart:serial_uart|tx_byte_saved[2]     ; serial_uart:serial_uart|tx_byte_saved[1]     ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; serial_uart:serial_uart|tx_bit_cnt_wrap      ; serial_uart:serial_uart|tx_state.s_start_bit ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.522      ;
+; 0.372 ; serial_uart:serial_uart|tx_bit_cnt_wrap      ; serial_uart:serial_uart|tx_bit_cnt_en        ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.523      ;
+; 0.372 ; heartbeat_led:hearbeat_led|counter[8]        ; heartbeat_led:hearbeat_led|counter[8]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.524      ;
+; 0.373 ; serial_uart:serial_uart|tx_state.s_idle      ; serial_uart:serial_uart|tx_bit_no[0]         ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374 ; serial_uart:serial_uart|rx_bit_cnt[2]        ; serial_uart:serial_uart|rx_bit_cnt[2]        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.526      ;
++-------+----------------------------------------------+----------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk_50'                                                                                                                                                                         ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                                                                                                         ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------+
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; display_ascii_number:display_ascii_number|altsyncram:Mux6_rtl_0|altsyncram_1301:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk_50 ; Rise       ; clk_50                                                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[0]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[0]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[10]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[10]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[11]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[11]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[12]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[12]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[13]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[13]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[14]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[14]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[15]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[15]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[16]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[16]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[17]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[17]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[18]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[18]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[19]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[19]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[1]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[1]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[20]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[20]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[21]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[21]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[22]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[22]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[23]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[23]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[24]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[24]                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[2]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[2]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[3]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[3]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[4]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[4]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[5]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[5]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[6]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[6]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[7]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[7]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[8]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[8]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[9]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|counter[9]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|led                                                                                                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|led                                                                                                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|tick                                                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; heartbeat_led:hearbeat_led|tick                                                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[0]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[0]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[1]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[1]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[2]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[2]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[3]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[3]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[4]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[4]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[5]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[5]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[6]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[6]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[7]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[7]                                                                                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data_valid                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data_valid                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_error                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_error                                                                                         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|reset_2r                                                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|reset_2r                                                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|reset_r                                                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|reset_r                                                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|rx_2r                                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|rx_2r                                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|rx_bit_cnt[0]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|rx_bit_cnt[0]                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|rx_bit_cnt[10]                                                                                         ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset_n   ; clk_50     ; 2.523 ; 2.523 ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; 2.658 ; 2.658 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50     ; -2.403 ; -2.403 ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; -2.538 ; -2.538 ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; hex0[*]   ; clk_50     ; 6.010 ; 6.010 ; Rise       ; clk_50          ;
+;  hex0[0]  ; clk_50     ; 5.946 ; 5.946 ; Rise       ; clk_50          ;
+;  hex0[1]  ; clk_50     ; 5.836 ; 5.836 ; Rise       ; clk_50          ;
+;  hex0[2]  ; clk_50     ; 5.844 ; 5.844 ; Rise       ; clk_50          ;
+;  hex0[3]  ; clk_50     ; 5.988 ; 5.988 ; Rise       ; clk_50          ;
+;  hex0[4]  ; clk_50     ; 5.963 ; 5.963 ; Rise       ; clk_50          ;
+;  hex0[5]  ; clk_50     ; 5.983 ; 5.983 ; Rise       ; clk_50          ;
+;  hex0[6]  ; clk_50     ; 6.010 ; 6.010 ; Rise       ; clk_50          ;
+; ledr[*]   ; clk_50     ; 4.779 ; 4.779 ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 4.125 ; 4.125 ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 4.779 ; 4.779 ; Rise       ; clk_50          ;
+; uart_txd  ; clk_50     ; 4.512 ; 4.512 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; hex0[*]   ; clk_50     ; 5.836 ; 5.836 ; Rise       ; clk_50          ;
+;  hex0[0]  ; clk_50     ; 5.946 ; 5.946 ; Rise       ; clk_50          ;
+;  hex0[1]  ; clk_50     ; 5.836 ; 5.836 ; Rise       ; clk_50          ;
+;  hex0[2]  ; clk_50     ; 5.844 ; 5.844 ; Rise       ; clk_50          ;
+;  hex0[3]  ; clk_50     ; 5.988 ; 5.988 ; Rise       ; clk_50          ;
+;  hex0[4]  ; clk_50     ; 5.963 ; 5.963 ; Rise       ; clk_50          ;
+;  hex0[5]  ; clk_50     ; 5.983 ; 5.983 ; Rise       ; clk_50          ;
+;  hex0[6]  ; clk_50     ; 6.010 ; 6.010 ; Rise       ; clk_50          ;
+; ledr[*]   ; clk_50     ; 4.125 ; 4.125 ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 4.125 ; 4.125 ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 4.779 ; 4.779 ; Rise       ; clk_50          ;
+; uart_txd  ; clk_50     ; 4.512 ; 4.512 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.811   ; 0.215 ; N/A      ; N/A     ; -1.423              ;
+;  clk_50          ; -2.811   ; 0.215 ; N/A      ; N/A     ; -1.423              ;
+; Design-wide TNS  ; -169.44  ; 0.0   ; 0.0      ; 0.0     ; -125.148            ;
+;  clk_50          ; -169.440 ; 0.000 ; N/A      ; N/A     ; -125.148            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; reset_n   ; clk_50     ; 4.579 ; 4.579 ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; 4.839 ; 4.839 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50     ; -2.403 ; -2.403 ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; -2.538 ; -2.538 ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; hex0[*]   ; clk_50     ; 10.255 ; 10.255 ; Rise       ; clk_50          ;
+;  hex0[0]  ; clk_50     ; 10.130 ; 10.130 ; Rise       ; clk_50          ;
+;  hex0[1]  ; clk_50     ; 9.907  ; 9.907  ; Rise       ; clk_50          ;
+;  hex0[2]  ; clk_50     ; 9.911  ; 9.911  ; Rise       ; clk_50          ;
+;  hex0[3]  ; clk_50     ; 10.195 ; 10.195 ; Rise       ; clk_50          ;
+;  hex0[4]  ; clk_50     ; 10.151 ; 10.151 ; Rise       ; clk_50          ;
+;  hex0[5]  ; clk_50     ; 10.190 ; 10.190 ; Rise       ; clk_50          ;
+;  hex0[6]  ; clk_50     ; 10.255 ; 10.255 ; Rise       ; clk_50          ;
+; ledr[*]   ; clk_50     ; 8.765  ; 8.765  ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 7.315  ; 7.315  ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 8.765  ; 8.765  ; Rise       ; clk_50          ;
+; uart_txd  ; clk_50     ; 8.120  ; 8.120  ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; hex0[*]   ; clk_50     ; 5.836 ; 5.836 ; Rise       ; clk_50          ;
+;  hex0[0]  ; clk_50     ; 5.946 ; 5.946 ; Rise       ; clk_50          ;
+;  hex0[1]  ; clk_50     ; 5.836 ; 5.836 ; Rise       ; clk_50          ;
+;  hex0[2]  ; clk_50     ; 5.844 ; 5.844 ; Rise       ; clk_50          ;
+;  hex0[3]  ; clk_50     ; 5.988 ; 5.988 ; Rise       ; clk_50          ;
+;  hex0[4]  ; clk_50     ; 5.963 ; 5.963 ; Rise       ; clk_50          ;
+;  hex0[5]  ; clk_50     ; 5.983 ; 5.983 ; Rise       ; clk_50          ;
+;  hex0[6]  ; clk_50     ; 6.010 ; 6.010 ; Rise       ; clk_50          ;
+; ledr[*]   ; clk_50     ; 4.125 ; 4.125 ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 4.125 ; 4.125 ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 4.779 ; 4.779 ; Rise       ; clk_50          ;
+; uart_txd  ; clk_50     ; 4.512 ; 4.512 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50     ; clk_50   ; 1821     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50     ; clk_50   ; 1821     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 29    ; 29   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 59    ; 59   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jun 06 11:44:31 2023
+Info: Command: quartus_sta lab5 -c top_level
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'top_level.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_50 clk_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.811
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.811      -169.440 clk_50 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clk_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.423
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.423      -125.148 clk_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.736
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.736       -27.963 clk_50 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.423
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.423      -125.148 clk_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4553 megabytes
+    Info: Processing ended: Tue Jun 06 11:44:32 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

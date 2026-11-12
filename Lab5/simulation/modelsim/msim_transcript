@@ -1,0 +1,177 @@
+# Reading E:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do top_level_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/seven_seg_pkg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/serial_uart_rtl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/heartbeat_led.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity heartbeat_led
+# -- Compiling architecture rtl of heartbeat_led
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/display_ascii_number.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity display_ascii_number
+# -- Compiling architecture rtl of display_ascii_number
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity heartbeat_led
+# ** Error: C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd(50): (vcom-1436) Actual expression (aggregate) of formal "key_n" is not globally static.
+# 
+# -- Loading package seven_seg_pkg
+# -- Loading entity display_ascii_number
+# ** Error: C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd(63): VHDL Compiler exiting
+# ** Error: E:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./top_level_run_msim_rtl_vhdl.do line 12
+# E:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd}"
+vcom -reportprogress 300 -work work C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity heartbeat_led
+# -- Loading package seven_seg_pkg
+# -- Loading entity display_ascii_number
+vcom -reportprogress 300 -work work C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/heartbeat_led.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity heartbeat_led
+# -- Compiling architecture rtl of heartbeat_led
+vcom -reportprogress 300 -work work C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/display_ascii_number.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity display_ascii_number
+# -- Compiling architecture rtl of display_ascii_number
+vcom -reportprogress 300 -work work C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/serial_uart_rtl.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+vcom -reportprogress 30 -work work C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/seven_seg_pkg.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+vcom -reportprogress 30 -work work C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity heartbeat_led
+# ** Error: (vcom-13) Recompile work.display_ascii_number because work.seven_seg_pkg has changed.
+# 
+# ** Error: C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd(58): (vcom-1195) Cannot find expanded name "work.display_ascii_number".
+# 
+# ** Error: C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd(58): Unknown expanded name.
+# ** Error: C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd(67): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/seven_seg_pkg.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+vcom -reportprogress 300 -work work C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/display_ascii_number.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity display_ascii_number
+# -- Compiling architecture rtl of display_ascii_number
+vcom -reportprogress 300 -work work C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab5/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# -- Loading entity serial_uart
+# -- Loading entity heartbeat_led
+# -- Loading package seven_seg_pkg
+# -- Loading entity display_ascii_number
+vsim work.top_level
+# vsim work.top_level 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.seven_seg_pkg(body)
+# Loading work.top_level(rtl)
+# Loading work.serial_uart(rtl)
+# Loading work.heartbeat_led(rtl)
+# Loading work.display_ascii_number(rtl)
+add wave -position end  sim:/top_level/clk_50
+add wave -position end  sim:/top_level/reset_n
+add wave -position end  sim:/top_level/uart_rxd
+add wave -position end  sim:/top_level/hex0
+add wave -position end  sim:/top_level/ledr
+add wave -position end  sim:/top_level/received_data
+add wave -position end  sim:/top_level/received_data_valid
+add wave -position end  sim:/top_level/received_error
+add wave -position end  sim:/top_level/heartbeat_key_n_input
+do ../run_sim_lab5.do
