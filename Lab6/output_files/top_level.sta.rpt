@@ -1,0 +1,1299 @@
+TimeQuest Timing Analyzer report for top_level
+Tue Jun 06 11:47:42 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk_50'
+ 12. Slow Model Hold: 'clk_50'
+ 13. Slow Model Recovery: 'clk_50'
+ 14. Slow Model Removal: 'clk_50'
+ 15. Slow Model Minimum Pulse Width: 'clk_50'
+ 16. Setup Times
+ 17. Hold Times
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'clk_50'
+ 26. Fast Model Hold: 'clk_50'
+ 27. Fast Model Recovery: 'clk_50'
+ 28. Fast Model Removal: 'clk_50'
+ 29. Fast Model Minimum Pulse Width: 'clk_50'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; top_level                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; clk_50     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 242.72 MHz ; 242.72 MHz      ; clk_50     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; clk_50 ; -3.120 ; -121.946      ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; clk_50 ; 0.391 ; 0.000         ;
++--------+-------+---------------+
+
+
++---------------------------------+
+; Slow Model Recovery Summary     ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; clk_50 ; -0.451 ; -7.280        ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Removal Summary     ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; clk_50 ; 1.047 ; 0.000         ;
++--------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; clk_50 ; -1.423 ; -107.148             ;
++--------+--------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk_50'                                                                                                                                                                                                                   ;
++--------+-----------------------------------------------------------------------------------------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------------------------------------------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.120 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[9]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.096      ;
+; -3.120 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[9]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.096      ;
+; -3.120 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[9]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.096      ;
+; -3.120 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[9]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.096      ;
+; -3.120 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[9]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.096      ;
+; -3.120 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[9]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.096      ;
+; -3.120 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[9]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.096      ;
+; -3.120 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[9]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.096      ;
+; -3.092 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[8]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.068      ;
+; -3.092 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[8]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.068      ;
+; -3.092 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[8]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.068      ;
+; -3.092 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[8]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.068      ;
+; -3.092 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[8]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.068      ;
+; -3.092 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[8]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.068      ;
+; -3.092 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[8]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.068      ;
+; -3.092 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[8]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 4.068      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[2]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[7]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[2]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[2]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[2]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[2]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[2]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[2]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[2]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[7]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[7]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[7]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[7]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[7]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[7]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -3.012 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[7]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.988      ;
+; -2.956 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[6]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.932      ;
+; -2.956 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[6]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.932      ;
+; -2.956 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[6]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.932      ;
+; -2.956 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[6]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.932      ;
+; -2.956 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[6]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.932      ;
+; -2.956 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[6]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.932      ;
+; -2.956 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[6]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.932      ;
+; -2.956 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[6]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.932      ;
+; -2.882 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[0]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.858      ;
+; -2.882 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[0]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.858      ;
+; -2.882 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[0]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.858      ;
+; -2.882 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[0]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.858      ;
+; -2.882 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[0]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.858      ;
+; -2.882 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[0]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.858      ;
+; -2.882 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[0]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.858      ;
+; -2.882 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[0]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.858      ;
+; -2.879 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[4]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.855      ;
+; -2.879 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[4]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.855      ;
+; -2.879 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[4]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.855      ;
+; -2.879 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[4]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.855      ;
+; -2.879 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[4]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.855      ;
+; -2.879 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[4]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.855      ;
+; -2.879 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[4]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.855      ;
+; -2.879 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[4]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.855      ;
+; -2.874 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[5]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.850      ;
+; -2.874 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[5]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.850      ;
+; -2.874 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[5]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.850      ;
+; -2.874 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[5]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.850      ;
+; -2.874 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[5]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.850      ;
+; -2.874 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[5]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.850      ;
+; -2.874 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[5]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.850      ;
+; -2.874 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[5]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.850      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[1]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[3]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[1]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[1]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[1]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[1]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[1]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[1]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[1]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[3]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[3]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[3]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[3]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[3]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[3]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.873 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[3]~reg0                          ; clk_50       ; clk_50      ; 1.000        ; -0.060     ; 3.849      ;
+; -2.172 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[1]    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.208      ;
+; -2.172 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[2]    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.208      ;
+; -2.172 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[3]    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.208      ;
+; -2.172 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[4]    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.208      ;
+; -2.172 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[5]    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.208      ;
+; -2.172 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[6]    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.208      ;
+; -2.172 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[7]    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.208      ;
+; -2.172 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[8]    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.208      ;
+; -2.172 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[9]    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.208      ;
+; -2.172 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[0]    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.208      ;
+; -2.023 ; serial_uart:serial_uart|rx_bit_cnt[4]                                                                                 ; serial_uart:serial_uart|rx_bit_cnt[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.059      ;
+; -2.023 ; serial_uart:serial_uart|rx_bit_cnt[4]                                                                                 ; serial_uart:serial_uart|rx_bit_cnt[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.059      ;
+; -2.023 ; serial_uart:serial_uart|rx_bit_cnt[4]                                                                                 ; serial_uart:serial_uart|rx_bit_cnt[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.059      ;
+; -2.023 ; serial_uart:serial_uart|rx_bit_cnt[4]                                                                                 ; serial_uart:serial_uart|rx_bit_cnt[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.059      ;
+; -2.023 ; serial_uart:serial_uart|rx_bit_cnt[4]                                                                                 ; serial_uart:serial_uart|rx_bit_cnt[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.059      ;
+; -2.023 ; serial_uart:serial_uart|rx_bit_cnt[4]                                                                                 ; serial_uart:serial_uart|rx_bit_cnt[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.059      ;
+; -2.023 ; serial_uart:serial_uart|rx_bit_cnt[4]                                                                                 ; serial_uart:serial_uart|rx_bit_cnt[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.059      ;
+; -2.023 ; serial_uart:serial_uart|rx_bit_cnt[4]                                                                                 ; serial_uart:serial_uart|rx_bit_cnt[8] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.059      ;
+; -2.023 ; serial_uart:serial_uart|rx_bit_cnt[4]                                                                                 ; serial_uart:serial_uart|rx_bit_cnt[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.059      ;
+; -1.995 ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; serial_uart:serial_uart|clk_cnt[1]    ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 3.031      ;
++--------+-----------------------------------------------------------------------------------------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk_50'                                                                                                                                                                                                                         ;
++-------+---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; serial_uart:serial_uart|rx_state.s_stop_bit ; serial_uart:serial_uart|rx_state.s_stop_bit                                                                           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_state.s_idle     ; serial_uart:serial_uart|rx_state.s_idle                                                                               ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_state.s_rx_data  ; serial_uart:serial_uart|rx_state.s_rx_data                                                                            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_bit_no[0]        ; serial_uart:serial_uart|rx_bit_no[0]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_bit_no[1]        ; serial_uart:serial_uart|rx_bit_no[1]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_bit_no[2]        ; serial_uart:serial_uart|rx_bit_no[2]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[6]      ; serial_uart:serial_uart|rx_byte_int[6]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[5]      ; serial_uart:serial_uart|rx_byte_int[5]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[4]      ; serial_uart:serial_uart|rx_byte_int[4]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[3]      ; serial_uart:serial_uart|rx_byte_int[3]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[2]      ; serial_uart:serial_uart|rx_byte_int[2]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[1]      ; serial_uart:serial_uart|rx_byte_int[1]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|rx_byte_int[0]      ; serial_uart:serial_uart|rx_byte_int[0]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; serial_uart:serial_uart|is_first_bit        ; serial_uart:serial_uart|is_first_bit                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.514 ; serial_uart:serial_uart|received_data[7]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[7]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.780      ;
+; 0.516 ; serial_uart:serial_uart|reset_r             ; serial_uart:serial_uart|reset_2r                                                                                      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.782      ;
+; 0.517 ; reset_2r                                    ; serial_uart:serial_uart|reset_r                                                                                       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.783      ;
+; 0.517 ; serial_uart:serial_uart|received_data[6]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[6]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.783      ;
+; 0.521 ; serial_uart:serial_uart|rx_byte_int[0]      ; serial_uart:serial_uart|received_data[0]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.787      ;
+; 0.521 ; sw_r                                        ; sw_2r                                                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.787      ;
+; 0.524 ; serial_uart:serial_uart|rx_byte_int[2]      ; serial_uart:serial_uart|received_data[2]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.790      ;
+; 0.526 ; serial_uart:serial_uart|rx_byte_int[4]      ; serial_uart:serial_uart|received_data[4]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.792      ;
+; 0.542 ; serial_uart:serial_uart|rx_state.s_rx_data  ; serial_uart:serial_uart|rx_bit_no[2]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.808      ;
+; 0.548 ; serial_uart:serial_uart|rx_state.s_rx_data  ; serial_uart:serial_uart|rx_bit_no[0]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.814      ;
+; 0.553 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|is_first_bit                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.819      ;
+; 0.566 ; serial_uart:serial_uart|rx_state.s_stop_bit ; serial_uart:serial_uart|received_data_valid                                                                           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.832      ;
+; 0.568 ; serial_uart:serial_uart|rx_state.s_stop_bit ; serial_uart:serial_uart|rx_bit_no[1]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.834      ;
+; 0.570 ; serial_uart:serial_uart|rx_bit_cnt[8]       ; serial_uart:serial_uart|rx_bit_cnt[8]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.836      ;
+; 0.571 ; serial_uart:serial_uart|rx_bit_cnt[8]       ; serial_uart:serial_uart|rx_bit_cnt_half                                                                               ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.837      ;
+; 0.571 ; serial_uart:serial_uart|rx_bit_cnt[6]       ; serial_uart:serial_uart|rx_bit_cnt_wrap                                                                               ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.837      ;
+; 0.592 ; sw_2r                                       ; ledr[6]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.858      ;
+; 0.596 ; sw_2r                                       ; ledr[2]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.862      ;
+; 0.598 ; sw_2r                                       ; ledr[7]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.864      ;
+; 0.656 ; bcd_decode_rom:bcd_decode_rom|addr_valid    ; bcd_decode_rom:bcd_decode_rom|rom_data_valid                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.922      ;
+; 0.657 ; reset_r                                     ; reset_2r                                                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.923      ;
+; 0.669 ; serial_uart:serial_uart|rx_r                ; serial_uart:serial_uart|rx_2r                                                                                         ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.934      ;
+; 0.682 ; serial_uart:serial_uart|rx_state.s_idle     ; serial_uart:serial_uart|rx_bit_cnt_en                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.948      ;
+; 0.706 ; serial_uart:serial_uart|rx_byte_int[6]      ; serial_uart:serial_uart|received_data[6]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.973      ;
+; 0.708 ; serial_uart:serial_uart|clk_cnt[4]          ; serial_uart:serial_uart|start_bit_cnt[4]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.975      ;
+; 0.711 ; serial_uart:serial_uart|clk_cnt[3]          ; serial_uart:serial_uart|start_bit_cnt[3]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.978      ;
+; 0.711 ; serial_uart:serial_uart|clk_cnt[7]          ; serial_uart:serial_uart|start_bit_cnt[7]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.978      ;
+; 0.716 ; serial_uart:serial_uart|clk_cnt[5]          ; serial_uart:serial_uart|start_bit_cnt[5]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.983      ;
+; 0.722 ; serial_uart:serial_uart|clk_cnt[6]          ; serial_uart:serial_uart|start_bit_cnt[6]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.989      ;
+; 0.729 ; serial_uart:serial_uart|reset_2r            ; serial_uart:serial_uart|rx_state.s_idle                                                                               ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.996      ;
+; 0.801 ; serial_uart:serial_uart|rx_byte_int[3]      ; serial_uart:serial_uart|received_data[3]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.067      ;
+; 0.802 ; serial_uart:serial_uart|rx_byte_int[1]      ; serial_uart:serial_uart|received_data[1]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.068      ;
+; 0.805 ; serial_uart:serial_uart|rx_bit_cnt[2]       ; serial_uart:serial_uart|rx_bit_cnt[2]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.071      ;
+; 0.805 ; serial_uart:serial_uart|clk_cnt[0]          ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806 ; serial_uart:serial_uart|rx_bit_cnt[0]       ; serial_uart:serial_uart|rx_bit_cnt[0]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.072      ;
+; 0.808 ; serial_uart:serial_uart|clk_cnt[8]          ; serial_uart:serial_uart|clk_cnt[8]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.074      ;
+; 0.812 ; serial_uart:serial_uart|rx_bit_cnt[4]       ; serial_uart:serial_uart|rx_bit_cnt[4]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.078      ;
+; 0.813 ; serial_uart:serial_uart|clk_cnt[1]          ; serial_uart:serial_uart|clk_cnt[1]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.079      ;
+; 0.817 ; serial_uart:serial_uart|clk_cnt[3]          ; serial_uart:serial_uart|clk_cnt[3]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.083      ;
+; 0.817 ; serial_uart:serial_uart|clk_cnt[6]          ; serial_uart:serial_uart|clk_cnt[6]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.083      ;
+; 0.829 ; serial_uart:serial_uart|received_data[2]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[2]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 1.096      ;
+; 0.830 ; serial_uart:serial_uart|rx_bit_cnt[7]       ; serial_uart:serial_uart|rx_bit_cnt[7]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.096      ;
+; 0.831 ; serial_uart:serial_uart|rx_byte_int[5]      ; serial_uart:serial_uart|received_data[5]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.097      ;
+; 0.831 ; serial_uart:serial_uart|received_data[4]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[4]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 1.098      ;
+; 0.831 ; serial_uart:serial_uart|rx_byte_int[5]      ; serial_uart:serial_uart|rx_byte_int[4]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.097      ;
+; 0.836 ; serial_uart:serial_uart|rx_byte_int[6]      ; serial_uart:serial_uart|rx_byte_int[5]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.102      ;
+; 0.837 ; serial_uart:serial_uart|rx_bit_cnt[6]       ; serial_uart:serial_uart|rx_bit_cnt[6]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.103      ;
+; 0.840 ; serial_uart:serial_uart|received_data[3]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[3]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 1.107      ;
+; 0.841 ; serial_uart:serial_uart|rx_bit_cnt[6]       ; serial_uart:serial_uart|rx_bit_cnt_half                                                                               ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.107      ;
+; 0.845 ; serial_uart:serial_uart|clk_cnt[2]          ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.111      ;
+; 0.848 ; serial_uart:serial_uart|clk_cnt[7]          ; serial_uart:serial_uart|clk_cnt[7]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.114      ;
+; 0.848 ; serial_uart:serial_uart|clk_cnt[9]          ; serial_uart:serial_uart|clk_cnt[9]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.114      ;
+; 0.849 ; serial_uart:serial_uart|clk_cnt[4]          ; serial_uart:serial_uart|clk_cnt[4]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.115      ;
+; 0.849 ; serial_uart:serial_uart|clk_cnt[5]          ; serial_uart:serial_uart|clk_cnt[5]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.115      ;
+; 0.849 ; serial_uart:serial_uart|reset_2r            ; serial_uart:serial_uart|is_first_bit                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.115      ;
+; 0.851 ; serial_uart:serial_uart|rx_bit_cnt[1]       ; serial_uart:serial_uart|rx_bit_cnt[1]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.117      ;
+; 0.852 ; serial_uart:serial_uart|clk_cnt[2]          ; serial_uart:serial_uart|start_bit_cnt[2]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 1.119      ;
+; 0.855 ; serial_uart:serial_uart|rx_bit_cnt[3]       ; serial_uart:serial_uart|rx_bit_cnt[3]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.121      ;
+; 0.856 ; serial_uart:serial_uart|rx_bit_cnt[5]       ; serial_uart:serial_uart|rx_bit_cnt[5]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.122      ;
+; 0.856 ; serial_uart:serial_uart|clk_cnt[1]          ; serial_uart:serial_uart|start_bit_cnt[1]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 1.123      ;
+; 0.858 ; serial_uart:serial_uart|clk_cnt[9]          ; serial_uart:serial_uart|start_bit_cnt[9]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 1.125      ;
+; 0.865 ; sw_2r                                       ; ledr[1]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.131      ;
+; 0.865 ; sw_2r                                       ; ledr[3]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.131      ;
+; 0.866 ; sw_2r                                       ; ledr[0]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.132      ;
+; 0.866 ; sw_2r                                       ; ledr[9]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.132      ;
+; 0.869 ; sw_2r                                       ; ledr[5]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.135      ;
+; 0.869 ; sw_2r                                       ; ledr[8]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.135      ;
+; 0.870 ; sw_2r                                       ; ledr[4]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.136      ;
+; 0.870 ; serial_uart:serial_uart|rx_state.s_stop_bit ; serial_uart:serial_uart|rx_bit_no[2]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.136      ;
+; 0.876 ; serial_uart:serial_uart|rx_state.s_stop_bit ; serial_uart:serial_uart|rx_bit_no[0]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.142      ;
+; 0.912 ; bcd_decode_rom:bcd_decode_rom|rom_addr[0]   ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; clk_50       ; clk_50      ; 0.000        ; 0.065      ; 1.211      ;
+; 0.941 ; serial_uart:serial_uart|rx_bit_cnt_half     ; serial_uart:serial_uart|rx_bit_cnt_en                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.003      ; 1.210      ;
+; 0.953 ; serial_uart:serial_uart|rx_bit_no[2]        ; serial_uart:serial_uart|rx_state.s_stop_bit                                                                           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.219      ;
+; 0.954 ; serial_uart:serial_uart|rx_bit_no[2]        ; serial_uart:serial_uart|rx_state.s_rx_data                                                                            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.220      ;
+; 0.971 ; serial_uart:serial_uart|received_data[1]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[1]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 1.238      ;
+; 0.973 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|clk_cnt[1]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.238      ;
+; 0.973 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.238      ;
+; 0.973 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|clk_cnt[3]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.238      ;
+; 0.973 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|clk_cnt[4]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.238      ;
+; 0.973 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|clk_cnt[5]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.238      ;
+; 0.973 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|clk_cnt[6]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.238      ;
+; 0.973 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|clk_cnt[7]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.238      ;
+; 0.973 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|clk_cnt[8]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.238      ;
+; 0.973 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|clk_cnt[9]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.238      ;
+; 0.973 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.238      ;
+; 0.979 ; serial_uart:serial_uart|received_data[0]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[0]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 1.246      ;
++-------+---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'clk_50'                                                                                                                              ;
++--------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.451 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[1]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 1.486      ;
+; -0.451 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[2]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 1.486      ;
+; -0.451 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[3]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 1.486      ;
+; -0.451 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[4]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 1.486      ;
+; -0.451 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[5]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 1.486      ;
+; -0.451 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[6]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 1.486      ;
+; -0.451 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[7]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 1.486      ;
+; -0.451 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[8]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 1.486      ;
+; -0.451 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[9]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 1.486      ;
+; -0.451 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[0]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 1.486      ;
+; -0.277 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.313      ;
+; -0.277 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.313      ;
+; -0.277 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.313      ;
+; -0.277 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.313      ;
+; -0.277 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.313      ;
+; -0.277 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.313      ;
+; -0.277 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.313      ;
+; -0.277 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.313      ;
+; -0.277 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[8] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.313      ;
+; -0.277 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[9] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.313      ;
++--------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'clk_50'                                                                                                                              ;
++-------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.047 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[0] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
+; 1.047 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[1] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
+; 1.047 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
+; 1.047 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[3] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
+; 1.047 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[4] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
+; 1.047 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[5] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
+; 1.047 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[6] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
+; 1.047 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[7] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
+; 1.047 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[8] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
+; 1.047 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[9] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.313      ;
+; 1.221 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[1]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.486      ;
+; 1.221 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[2]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.486      ;
+; 1.221 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[3]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.486      ;
+; 1.221 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[4]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.486      ;
+; 1.221 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[5]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.486      ;
+; 1.221 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[6]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.486      ;
+; 1.221 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[7]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.486      ;
+; 1.221 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[8]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.486      ;
+; 1.221 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[9]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.486      ;
+; 1.221 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[0]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 1.486      ;
++-------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk_50'                                                                                                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk_50 ; Rise       ; clk_50                                                                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|addr_valid                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|addr_valid                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[0]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[0]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[1]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[1]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[2]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[2]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[3]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[3]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[4]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[4]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[5]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[5]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[6]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[6]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[7]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[7]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_data_valid                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_data_valid                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[0]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[0]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[1]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[1]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[2]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[2]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[3]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[3]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[4]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[4]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[5]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[5]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[6]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[6]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[7]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[7]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[8]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[8]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[9]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[9]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; reset_2r                                                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; reset_2r                                                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; reset_r                                                                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; reset_r                                                                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[1]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[1]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[3]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[3]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[4]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[4]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[5]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[5]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[6]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[6]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[7]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[7]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[8]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[8]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[9]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[9]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|is_first_bit                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|is_first_bit                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[0]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[0]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[1]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[1]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[2]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[2]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[3]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[3]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[4]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[4]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[5]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[5]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[6]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[6]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[7]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[7]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data_valid                                                                           ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50     ; 3.695  ; 3.695  ; Rise       ; clk_50          ;
+; sw        ; clk_50     ; -0.366 ; -0.366 ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; -0.195 ; -0.195 ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50     ; -3.465 ; -3.465 ; Rise       ; clk_50          ;
+; sw        ; clk_50     ; 0.596  ; 0.596  ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; 0.425  ; 0.425  ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledr[*]   ; clk_50     ; 6.727 ; 6.727 ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 6.672 ; 6.672 ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 6.419 ; 6.419 ; Rise       ; clk_50          ;
+;  ledr[2]  ; clk_50     ; 6.657 ; 6.657 ; Rise       ; clk_50          ;
+;  ledr[3]  ; clk_50     ; 6.441 ; 6.441 ; Rise       ; clk_50          ;
+;  ledr[4]  ; clk_50     ; 6.438 ; 6.438 ; Rise       ; clk_50          ;
+;  ledr[5]  ; clk_50     ; 6.420 ; 6.420 ; Rise       ; clk_50          ;
+;  ledr[6]  ; clk_50     ; 6.626 ; 6.626 ; Rise       ; clk_50          ;
+;  ledr[7]  ; clk_50     ; 6.672 ; 6.672 ; Rise       ; clk_50          ;
+;  ledr[8]  ; clk_50     ; 6.645 ; 6.645 ; Rise       ; clk_50          ;
+;  ledr[9]  ; clk_50     ; 6.727 ; 6.727 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledr[*]   ; clk_50     ; 6.419 ; 6.419 ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 6.672 ; 6.672 ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 6.419 ; 6.419 ; Rise       ; clk_50          ;
+;  ledr[2]  ; clk_50     ; 6.657 ; 6.657 ; Rise       ; clk_50          ;
+;  ledr[3]  ; clk_50     ; 6.441 ; 6.441 ; Rise       ; clk_50          ;
+;  ledr[4]  ; clk_50     ; 6.438 ; 6.438 ; Rise       ; clk_50          ;
+;  ledr[5]  ; clk_50     ; 6.420 ; 6.420 ; Rise       ; clk_50          ;
+;  ledr[6]  ; clk_50     ; 6.626 ; 6.626 ; Rise       ; clk_50          ;
+;  ledr[7]  ; clk_50     ; 6.672 ; 6.672 ; Rise       ; clk_50          ;
+;  ledr[8]  ; clk_50     ; 6.645 ; 6.645 ; Rise       ; clk_50          ;
+;  ledr[9]  ; clk_50     ; 6.727 ; 6.727 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; clk_50 ; -1.477 ; -27.195       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; clk_50 ; 0.215 ; 0.000         ;
++--------+-------+---------------+
+
+
++--------------------------------+
+; Fast Model Recovery Summary    ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; clk_50 ; 0.214 ; 0.000         ;
++--------+-------+---------------+
+
+
++--------------------------------+
+; Fast Model Removal Summary     ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; clk_50 ; 0.588 ; 0.000         ;
++--------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; clk_50 ; -1.423 ; -107.148             ;
++--------+--------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk_50'                                                                                                                                                                                                                ;
++--------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                                             ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.477 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[9]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.443      ;
+; -1.477 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[9]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.443      ;
+; -1.477 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[9]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.443      ;
+; -1.477 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[9]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.443      ;
+; -1.477 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[9]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.443      ;
+; -1.477 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[9]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.443      ;
+; -1.477 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[9]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.443      ;
+; -1.477 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[9]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.443      ;
+; -1.475 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[8]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.441      ;
+; -1.475 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[8]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.441      ;
+; -1.475 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[8]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.441      ;
+; -1.475 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[8]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.441      ;
+; -1.475 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[8]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.441      ;
+; -1.475 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[8]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.441      ;
+; -1.475 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[8]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.441      ;
+; -1.475 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[8]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.441      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[2]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[7]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[2]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[2]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[2]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[2]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[2]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[2]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[2]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[7]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[7]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[7]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[7]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[7]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[7]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.417 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[7]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.383      ;
+; -1.398 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[6]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.364      ;
+; -1.398 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[6]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.364      ;
+; -1.398 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[6]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.364      ;
+; -1.398 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[6]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.364      ;
+; -1.398 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[6]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.364      ;
+; -1.398 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[6]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.364      ;
+; -1.398 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[6]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.364      ;
+; -1.398 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[6]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.364      ;
+; -1.368 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[0]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.334      ;
+; -1.368 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[0]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.334      ;
+; -1.368 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[0]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.334      ;
+; -1.368 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[0]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.334      ;
+; -1.368 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[0]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.334      ;
+; -1.368 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[0]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.334      ;
+; -1.368 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[0]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.334      ;
+; -1.368 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[0]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.334      ;
+; -1.366 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[4]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.332      ;
+; -1.366 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[4]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.332      ;
+; -1.366 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[4]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.332      ;
+; -1.366 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[4]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.332      ;
+; -1.366 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[4]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.332      ;
+; -1.366 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[4]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.332      ;
+; -1.366 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[4]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.332      ;
+; -1.366 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[4]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.332      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[3]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[5]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[3]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[3]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[3]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[3]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[3]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[3]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[3]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[5]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[5]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[5]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[5]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[5]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[5]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.363 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[5]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.329      ;
+; -1.362 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; ledr[1]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.328      ;
+; -1.362 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ; ledr[1]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.328      ;
+; -1.362 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ; ledr[1]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.328      ;
+; -1.362 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ; ledr[1]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.328      ;
+; -1.362 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ; ledr[1]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.328      ;
+; -1.362 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ; ledr[1]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.328      ;
+; -1.362 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ; ledr[1]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.328      ;
+; -1.362 ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ; ledr[1]~reg0                       ; clk_50       ; clk_50      ; 1.000        ; -0.066     ; 2.328      ;
+; -0.497 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[8] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[9] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.529      ;
+; -0.497 ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; serial_uart:serial_uart|clk_cnt[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.529      ;
+; -0.437 ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; serial_uart:serial_uart|clk_cnt[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.469      ;
+; -0.437 ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; serial_uart:serial_uart|clk_cnt[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.469      ;
+; -0.437 ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; serial_uart:serial_uart|clk_cnt[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.469      ;
+; -0.437 ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; serial_uart:serial_uart|clk_cnt[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.469      ;
+; -0.437 ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; serial_uart:serial_uart|clk_cnt[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.469      ;
+; -0.437 ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; serial_uart:serial_uart|clk_cnt[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.469      ;
+; -0.437 ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; serial_uart:serial_uart|clk_cnt[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.469      ;
+; -0.437 ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; serial_uart:serial_uart|clk_cnt[8] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.469      ;
+; -0.437 ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; serial_uart:serial_uart|clk_cnt[9] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.469      ;
+; -0.437 ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; serial_uart:serial_uart|clk_cnt[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 1.469      ;
++--------+-----------------------------------------------------------------------------------------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk_50'                                                                                                                                                                                                                         ;
++-------+---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                                                                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; serial_uart:serial_uart|rx_state.s_stop_bit ; serial_uart:serial_uart|rx_state.s_stop_bit                                                                           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_state.s_idle     ; serial_uart:serial_uart|rx_state.s_idle                                                                               ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_state.s_rx_data  ; serial_uart:serial_uart|rx_state.s_rx_data                                                                            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_bit_no[0]        ; serial_uart:serial_uart|rx_bit_no[0]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_bit_no[1]        ; serial_uart:serial_uart|rx_bit_no[1]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_bit_no[2]        ; serial_uart:serial_uart|rx_bit_no[2]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[6]      ; serial_uart:serial_uart|rx_byte_int[6]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[5]      ; serial_uart:serial_uart|rx_byte_int[5]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[4]      ; serial_uart:serial_uart|rx_byte_int[4]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[3]      ; serial_uart:serial_uart|rx_byte_int[3]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[2]      ; serial_uart:serial_uart|rx_byte_int[2]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[1]      ; serial_uart:serial_uart|rx_byte_int[1]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|rx_byte_int[0]      ; serial_uart:serial_uart|rx_byte_int[0]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; serial_uart:serial_uart|is_first_bit        ; serial_uart:serial_uart|is_first_bit                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.237 ; serial_uart:serial_uart|reset_r             ; serial_uart:serial_uart|reset_2r                                                                                      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.389      ;
+; 0.237 ; serial_uart:serial_uart|received_data[7]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[7]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.389      ;
+; 0.238 ; reset_2r                                    ; serial_uart:serial_uart|reset_r                                                                                       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.390      ;
+; 0.238 ; serial_uart:serial_uart|received_data[6]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[6]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.390      ;
+; 0.239 ; serial_uart:serial_uart|rx_byte_int[2]      ; serial_uart:serial_uart|received_data[2]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.391      ;
+; 0.240 ; serial_uart:serial_uart|rx_byte_int[4]      ; serial_uart:serial_uart|received_data[4]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.392      ;
+; 0.240 ; serial_uart:serial_uart|rx_byte_int[0]      ; serial_uart:serial_uart|received_data[0]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.392      ;
+; 0.241 ; sw_r                                        ; sw_2r                                                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.393      ;
+; 0.250 ; serial_uart:serial_uart|rx_state.s_rx_data  ; serial_uart:serial_uart|rx_bit_no[2]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.402      ;
+; 0.255 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|is_first_bit                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.407      ;
+; 0.256 ; serial_uart:serial_uart|rx_state.s_rx_data  ; serial_uart:serial_uart|rx_bit_no[0]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.408      ;
+; 0.264 ; serial_uart:serial_uart|rx_bit_cnt[8]       ; serial_uart:serial_uart|rx_bit_cnt[8]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.416      ;
+; 0.265 ; serial_uart:serial_uart|rx_bit_cnt[8]       ; serial_uart:serial_uart|rx_bit_cnt_half                                                                               ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.417      ;
+; 0.265 ; serial_uart:serial_uart|rx_state.s_stop_bit ; serial_uart:serial_uart|received_data_valid                                                                           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.417      ;
+; 0.266 ; serial_uart:serial_uart|rx_state.s_stop_bit ; serial_uart:serial_uart|rx_bit_no[1]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.418      ;
+; 0.269 ; serial_uart:serial_uart|rx_bit_cnt[6]       ; serial_uart:serial_uart|rx_bit_cnt_wrap                                                                               ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.421      ;
+; 0.280 ; sw_2r                                       ; ledr[6]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.432      ;
+; 0.282 ; sw_2r                                       ; ledr[2]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.434      ;
+; 0.284 ; sw_2r                                       ; ledr[7]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.436      ;
+; 0.306 ; serial_uart:serial_uart|rx_state.s_idle     ; serial_uart:serial_uart|rx_bit_cnt_en                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.458      ;
+; 0.314 ; serial_uart:serial_uart|rx_r                ; serial_uart:serial_uart|rx_2r                                                                                         ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.465      ;
+; 0.320 ; serial_uart:serial_uart|rx_byte_int[6]      ; serial_uart:serial_uart|received_data[6]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.473      ;
+; 0.322 ; serial_uart:serial_uart|clk_cnt[4]          ; serial_uart:serial_uart|start_bit_cnt[4]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.475      ;
+; 0.323 ; reset_r                                     ; reset_2r                                                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.475      ;
+; 0.323 ; bcd_decode_rom:bcd_decode_rom|addr_valid    ; bcd_decode_rom:bcd_decode_rom|rom_data_valid                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.475      ;
+; 0.323 ; serial_uart:serial_uart|clk_cnt[7]          ; serial_uart:serial_uart|start_bit_cnt[7]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.476      ;
+; 0.324 ; serial_uart:serial_uart|clk_cnt[3]          ; serial_uart:serial_uart|start_bit_cnt[3]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.477      ;
+; 0.328 ; serial_uart:serial_uart|clk_cnt[5]          ; serial_uart:serial_uart|start_bit_cnt[5]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.481      ;
+; 0.332 ; serial_uart:serial_uart|clk_cnt[6]          ; serial_uart:serial_uart|start_bit_cnt[6]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.485      ;
+; 0.332 ; serial_uart:serial_uart|reset_2r            ; serial_uart:serial_uart|rx_state.s_idle                                                                               ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.485      ;
+; 0.359 ; serial_uart:serial_uart|clk_cnt[0]          ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.511      ;
+; 0.362 ; serial_uart:serial_uart|rx_bit_cnt[2]       ; serial_uart:serial_uart|rx_bit_cnt[2]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362 ; serial_uart:serial_uart|clk_cnt[8]          ; serial_uart:serial_uart|clk_cnt[8]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; serial_uart:serial_uart|rx_bit_cnt[0]       ; serial_uart:serial_uart|rx_bit_cnt[0]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; serial_uart:serial_uart|rx_byte_int[3]      ; serial_uart:serial_uart|received_data[3]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; serial_uart:serial_uart|rx_bit_cnt[4]       ; serial_uart:serial_uart|rx_bit_cnt[4]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.516      ;
+; 0.364 ; serial_uart:serial_uart|rx_byte_int[1]      ; serial_uart:serial_uart|received_data[1]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365 ; serial_uart:serial_uart|clk_cnt[1]          ; serial_uart:serial_uart|clk_cnt[1]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.517      ;
+; 0.367 ; serial_uart:serial_uart|clk_cnt[3]          ; serial_uart:serial_uart|clk_cnt[3]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; serial_uart:serial_uart|clk_cnt[6]          ; serial_uart:serial_uart|clk_cnt[6]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.519      ;
+; 0.370 ; serial_uart:serial_uart|rx_byte_int[5]      ; serial_uart:serial_uart|rx_byte_int[4]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.522      ;
+; 0.372 ; serial_uart:serial_uart|rx_byte_int[6]      ; serial_uart:serial_uart|rx_byte_int[5]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.524      ;
+; 0.375 ; serial_uart:serial_uart|clk_cnt[2]          ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; serial_uart:serial_uart|rx_byte_int[5]      ; serial_uart:serial_uart|received_data[5]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; serial_uart:serial_uart|clk_cnt[7]          ; serial_uart:serial_uart|clk_cnt[7]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377 ; serial_uart:serial_uart|rx_bit_cnt[7]       ; serial_uart:serial_uart|rx_bit_cnt[7]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378 ; serial_uart:serial_uart|clk_cnt[4]          ; serial_uart:serial_uart|clk_cnt[4]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; serial_uart:serial_uart|clk_cnt[5]          ; serial_uart:serial_uart|clk_cnt[5]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; serial_uart:serial_uart|clk_cnt[9]          ; serial_uart:serial_uart|clk_cnt[9]                                                                                    ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; serial_uart:serial_uart|reset_2r            ; serial_uart:serial_uart|is_first_bit                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.530      ;
+; 0.380 ; serial_uart:serial_uart|rx_bit_cnt[1]       ; serial_uart:serial_uart|rx_bit_cnt[1]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.532      ;
+; 0.380 ; serial_uart:serial_uart|rx_bit_cnt[6]       ; serial_uart:serial_uart|rx_bit_cnt[6]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.532      ;
+; 0.382 ; serial_uart:serial_uart|rx_bit_cnt[3]       ; serial_uart:serial_uart|rx_bit_cnt[3]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.534      ;
+; 0.385 ; serial_uart:serial_uart|rx_bit_cnt[5]       ; serial_uart:serial_uart|rx_bit_cnt[5]                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.537      ;
+; 0.387 ; serial_uart:serial_uart|rx_bit_cnt[6]       ; serial_uart:serial_uart|rx_bit_cnt_half                                                                               ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.539      ;
+; 0.390 ; bcd_decode_rom:bcd_decode_rom|rom_addr[0]   ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ; clk_50       ; clk_50      ; 0.000        ; 0.070      ; 0.598      ;
+; 0.390 ; serial_uart:serial_uart|rx_state.s_stop_bit ; serial_uart:serial_uart|rx_bit_no[2]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.542      ;
+; 0.391 ; serial_uart:serial_uart|received_data[2]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[2]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.544      ;
+; 0.394 ; serial_uart:serial_uart|received_data[4]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[4]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.547      ;
+; 0.395 ; serial_uart:serial_uart|rx_state.s_stop_bit ; serial_uart:serial_uart|rx_bit_no[0]                                                                                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.547      ;
+; 0.396 ; sw_2r                                       ; ledr[3]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.548      ;
+; 0.397 ; sw_2r                                       ; ledr[0]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.549      ;
+; 0.397 ; sw_2r                                       ; ledr[1]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.549      ;
+; 0.398 ; sw_2r                                       ; ledr[9]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.550      ;
+; 0.400 ; serial_uart:serial_uart|received_data[3]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[3]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.553      ;
+; 0.401 ; sw_2r                                       ; ledr[5]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.553      ;
+; 0.401 ; sw_2r                                       ; ledr[8]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.553      ;
+; 0.402 ; sw_2r                                       ; ledr[4]~reg0                                                                                                          ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.554      ;
+; 0.411 ; serial_uart:serial_uart|clk_cnt[2]          ; serial_uart:serial_uart|start_bit_cnt[2]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.564      ;
+; 0.413 ; serial_uart:serial_uart|clk_cnt[1]          ; serial_uart:serial_uart|start_bit_cnt[1]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.566      ;
+; 0.414 ; serial_uart:serial_uart|clk_cnt[9]          ; serial_uart:serial_uart|start_bit_cnt[9]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.567      ;
+; 0.426 ; serial_uart:serial_uart|rx_bit_no[2]        ; serial_uart:serial_uart|rx_state.s_stop_bit                                                                           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.578      ;
+; 0.427 ; serial_uart:serial_uart|rx_bit_no[2]        ; serial_uart:serial_uart|rx_state.s_rx_data                                                                            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.579      ;
+; 0.428 ; serial_uart:serial_uart|rx_bit_cnt_half     ; serial_uart:serial_uart|rx_bit_cnt_en                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.003      ; 0.583      ;
+; 0.444 ; serial_uart:serial_uart|received_data[5]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[5]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.597      ;
+; 0.445 ; serial_uart:serial_uart|received_data[0]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[0]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.598      ;
+; 0.446 ; serial_uart:serial_uart|received_data[1]    ; bcd_decode_rom:bcd_decode_rom|rom_addr[1]                                                                             ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.599      ;
+; 0.447 ; serial_uart:serial_uart|rx_byte_int[3]      ; serial_uart:serial_uart|rx_byte_int[2]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.599      ;
+; 0.448 ; serial_uart:serial_uart|rx_byte_int[2]      ; serial_uart:serial_uart|rx_byte_int[1]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.600      ;
+; 0.449 ; serial_uart:serial_uart|rx_byte_int[1]      ; serial_uart:serial_uart|rx_byte_int[0]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.601      ;
+; 0.451 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|received_data[7]                                                                              ; clk_50       ; clk_50      ; 0.000        ; 0.006      ; 0.609      ;
+; 0.455 ; serial_uart:serial_uart|rx_state.s_rx_data  ; serial_uart:serial_uart|rx_state.s_stop_bit                                                                           ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.607      ;
+; 0.459 ; serial_uart:serial_uart|rx_byte_int[4]      ; serial_uart:serial_uart|rx_byte_int[3]                                                                                ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.611      ;
+; 0.459 ; serial_uart:serial_uart|rx_state.s_rx_data  ; serial_uart:serial_uart|is_first_bit                                                                                  ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.610      ;
+; 0.462 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|rx_bit_cnt_en                                                                                 ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.615      ;
+; 0.469 ; serial_uart:serial_uart|rx_2r               ; serial_uart:serial_uart|received_data_valid                                                                           ; clk_50       ; clk_50      ; 0.000        ; 0.001      ; 0.622      ;
++-------+---------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'clk_50'                                                                                                                             ;
++-------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.214 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[1]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[2]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[3]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[4]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[5]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[6]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[7]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[8]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[9]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 0.817      ;
+; 0.214 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[0]       ; clk_50       ; clk_50      ; 1.000        ; -0.001     ; 0.817      ;
+; 0.292 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[0] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 0.740      ;
+; 0.292 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[1] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 0.740      ;
+; 0.292 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[2] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 0.740      ;
+; 0.292 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[3] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 0.740      ;
+; 0.292 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[4] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 0.740      ;
+; 0.292 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[5] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 0.740      ;
+; 0.292 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[6] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 0.740      ;
+; 0.292 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[7] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 0.740      ;
+; 0.292 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[8] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 0.740      ;
+; 0.292 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[9] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 0.740      ;
++-------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'clk_50'                                                                                                                              ;
++-------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.588 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[0] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.588 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[1] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.588 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[2] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.588 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[3] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.588 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[4] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.588 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[5] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.588 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[6] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.588 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[7] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.588 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[8] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.588 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|start_bit_cnt[9] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 0.740      ;
+; 0.666 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[1]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[2]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[3]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[4]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[5]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[6]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[7]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[8]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[9]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.817      ;
+; 0.666 ; serial_uart:serial_uart|reset_2r ; serial_uart:serial_uart|clk_cnt[0]       ; clk_50       ; clk_50      ; 0.000        ; -0.001     ; 0.817      ;
++-------+----------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk_50'                                                                                                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------------------------------------------------------------------------------------------+
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0|altsyncram_m571:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk_50 ; Rise       ; clk_50                                                                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|addr_valid                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|addr_valid                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[0]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[0]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[1]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[1]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[2]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[2]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[3]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[3]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[4]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[4]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[5]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[5]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[6]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[6]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[7]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_addr[7]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_data_valid                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; bcd_decode_rom:bcd_decode_rom|rom_data_valid                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[0]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[0]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[1]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[1]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[2]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[2]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[3]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[3]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[4]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[4]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[5]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[5]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[6]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[6]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[7]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[7]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[8]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[8]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; ledr[9]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; ledr[9]~reg0                                                                                                          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; reset_2r                                                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; reset_2r                                                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; reset_r                                                                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; reset_r                                                                                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[0]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[1]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[1]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[2]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[3]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[3]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[4]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[4]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[5]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[5]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[6]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[6]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[7]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[7]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[8]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[8]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[9]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|clk_cnt[9]                                                                                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|is_first_bit                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|is_first_bit                                                                                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[0]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[0]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[1]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[1]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[2]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[2]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[3]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[3]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[4]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[4]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[5]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[5]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[6]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[6]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[7]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data[7]                                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_50 ; Rise       ; serial_uart:serial_uart|received_data_valid                                                                           ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50     ; 2.014  ; 2.014  ; Rise       ; clk_50          ;
+; sw        ; clk_50     ; -0.510 ; -0.510 ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; -0.385 ; -0.385 ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50     ; -1.894 ; -1.894 ; Rise       ; clk_50          ;
+; sw        ; clk_50     ; 0.630  ; 0.630  ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; 0.505  ; 0.505  ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledr[*]   ; clk_50     ; 3.848 ; 3.848 ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 3.800 ; 3.800 ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 3.677 ; 3.677 ; Rise       ; clk_50          ;
+;  ledr[2]  ; clk_50     ; 3.788 ; 3.788 ; Rise       ; clk_50          ;
+;  ledr[3]  ; clk_50     ; 3.690 ; 3.690 ; Rise       ; clk_50          ;
+;  ledr[4]  ; clk_50     ; 3.689 ; 3.689 ; Rise       ; clk_50          ;
+;  ledr[5]  ; clk_50     ; 3.678 ; 3.678 ; Rise       ; clk_50          ;
+;  ledr[6]  ; clk_50     ; 3.756 ; 3.756 ; Rise       ; clk_50          ;
+;  ledr[7]  ; clk_50     ; 3.801 ; 3.801 ; Rise       ; clk_50          ;
+;  ledr[8]  ; clk_50     ; 3.775 ; 3.775 ; Rise       ; clk_50          ;
+;  ledr[9]  ; clk_50     ; 3.848 ; 3.848 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledr[*]   ; clk_50     ; 3.677 ; 3.677 ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 3.800 ; 3.800 ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 3.677 ; 3.677 ; Rise       ; clk_50          ;
+;  ledr[2]  ; clk_50     ; 3.788 ; 3.788 ; Rise       ; clk_50          ;
+;  ledr[3]  ; clk_50     ; 3.690 ; 3.690 ; Rise       ; clk_50          ;
+;  ledr[4]  ; clk_50     ; 3.689 ; 3.689 ; Rise       ; clk_50          ;
+;  ledr[5]  ; clk_50     ; 3.678 ; 3.678 ; Rise       ; clk_50          ;
+;  ledr[6]  ; clk_50     ; 3.756 ; 3.756 ; Rise       ; clk_50          ;
+;  ledr[7]  ; clk_50     ; 3.801 ; 3.801 ; Rise       ; clk_50          ;
+;  ledr[8]  ; clk_50     ; 3.775 ; 3.775 ; Rise       ; clk_50          ;
+;  ledr[9]  ; clk_50     ; 3.848 ; 3.848 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.120   ; 0.215 ; -0.451   ; 0.588   ; -1.423              ;
+;  clk_50          ; -3.120   ; 0.215 ; -0.451   ; 0.588   ; -1.423              ;
+; Design-wide TNS  ; -121.946 ; 0.0   ; -7.28    ; 0.0     ; -107.148            ;
+;  clk_50          ; -121.946 ; 0.000 ; -7.280   ; 0.000   ; -107.148            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50     ; 3.695  ; 3.695  ; Rise       ; clk_50          ;
+; sw        ; clk_50     ; -0.366 ; -0.366 ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; -0.195 ; -0.195 ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; reset_n   ; clk_50     ; -1.894 ; -1.894 ; Rise       ; clk_50          ;
+; sw        ; clk_50     ; 0.630  ; 0.630  ; Rise       ; clk_50          ;
+; uart_rxd  ; clk_50     ; 0.505  ; 0.505  ; Rise       ; clk_50          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledr[*]   ; clk_50     ; 6.727 ; 6.727 ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 6.672 ; 6.672 ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 6.419 ; 6.419 ; Rise       ; clk_50          ;
+;  ledr[2]  ; clk_50     ; 6.657 ; 6.657 ; Rise       ; clk_50          ;
+;  ledr[3]  ; clk_50     ; 6.441 ; 6.441 ; Rise       ; clk_50          ;
+;  ledr[4]  ; clk_50     ; 6.438 ; 6.438 ; Rise       ; clk_50          ;
+;  ledr[5]  ; clk_50     ; 6.420 ; 6.420 ; Rise       ; clk_50          ;
+;  ledr[6]  ; clk_50     ; 6.626 ; 6.626 ; Rise       ; clk_50          ;
+;  ledr[7]  ; clk_50     ; 6.672 ; 6.672 ; Rise       ; clk_50          ;
+;  ledr[8]  ; clk_50     ; 6.645 ; 6.645 ; Rise       ; clk_50          ;
+;  ledr[9]  ; clk_50     ; 6.727 ; 6.727 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ledr[*]   ; clk_50     ; 3.677 ; 3.677 ; Rise       ; clk_50          ;
+;  ledr[0]  ; clk_50     ; 3.800 ; 3.800 ; Rise       ; clk_50          ;
+;  ledr[1]  ; clk_50     ; 3.677 ; 3.677 ; Rise       ; clk_50          ;
+;  ledr[2]  ; clk_50     ; 3.788 ; 3.788 ; Rise       ; clk_50          ;
+;  ledr[3]  ; clk_50     ; 3.690 ; 3.690 ; Rise       ; clk_50          ;
+;  ledr[4]  ; clk_50     ; 3.689 ; 3.689 ; Rise       ; clk_50          ;
+;  ledr[5]  ; clk_50     ; 3.678 ; 3.678 ; Rise       ; clk_50          ;
+;  ledr[6]  ; clk_50     ; 3.756 ; 3.756 ; Rise       ; clk_50          ;
+;  ledr[7]  ; clk_50     ; 3.801 ; 3.801 ; Rise       ; clk_50          ;
+;  ledr[8]  ; clk_50     ; 3.775 ; 3.775 ; Rise       ; clk_50          ;
+;  ledr[9]  ; clk_50     ; 3.848 ; 3.848 ; Rise       ; clk_50          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50     ; clk_50   ; 726      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50     ; clk_50   ; 726      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50     ; clk_50   ; 20       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50     ; clk_50   ; 20       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 3     ; 3    ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jun 06 11:47:42 2023
+Info: Command: quartus_sta Lab6 -c top_level
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'top_level.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_50 clk_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.120
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.120      -121.946 clk_50 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clk_50 
+Info (332146): Worst-case recovery slack is -0.451
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.451        -7.280 clk_50 
+Info (332146): Worst-case removal slack is 1.047
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.047         0.000 clk_50 
+Info (332146): Worst-case minimum pulse width slack is -1.423
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.423      -107.148 clk_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.477
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.477       -27.195 clk_50 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk_50 
+Info (332146): Worst-case recovery slack is 0.214
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.214         0.000 clk_50 
+Info (332146): Worst-case removal slack is 0.588
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.588         0.000 clk_50 
+Info (332146): Worst-case minimum pulse width slack is -1.423
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.423      -107.148 clk_50 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4542 megabytes
+    Info: Processing ended: Tue Jun 06 11:47:42 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

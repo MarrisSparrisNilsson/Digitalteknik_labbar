@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="top_level">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_level|bcd_decode_rom:bcd_decode_rom|altsyncram:bcd_rom_rtl_0" CBX_FILE_NAME="altsyncram_m571.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
