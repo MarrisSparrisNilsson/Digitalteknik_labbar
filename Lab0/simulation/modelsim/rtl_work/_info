@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\marti\JU\Digitalteknik\Lab0\simulation\modelsim
+Etop_level
+Z1 w1680010156
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\marti\JU\Digitalteknik\Lab0\simulation\modelsim
+Z5 8C:/Users/marti/JU/Digitalteknik/Lab0/top_level.vhd
+Z6 FC:/Users/marti/JU/Digitalteknik/Lab0/top_level.vhd
+l0
+L4
+VRVV;9KXGbDV;V1JeA?^Xh0
+!s100 4hMQY5>I_SBAii3OIEi6R0
+Z7 OV;C;10.1d;51
+31
+!i10b 1
+Z8 !s108 1680197296.415000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/marti/JU/Digitalteknik/Lab0/top_level.vhd|
+Z10 !s107 C:/Users/marti/JU/Digitalteknik/Lab0/top_level.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+Artl
+R2
+R3
+DEx4 work 9 top_level 0 22 RVV;9KXGbDV;V1JeA?^Xh0
+l13
+L12
+V9QBJmme<ePdD_MiSDo_El1
+!s100 MfHjDET;b?Ain@N@M[UHz3
+R7
+31
+!i10b 1
+R8
+R9
+R10
+R11
+R12

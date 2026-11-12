@@ -1,0 +1,7 @@
+|top_level
+sw0 => ledr0.IN1
+sw1 => ledr0.IN0
+sw2 => ledr0.IN1
+ledr0 <= ledr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
