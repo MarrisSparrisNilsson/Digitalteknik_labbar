@@ -1,0 +1,267 @@
+library ieee;
+    use ieee.std_logic_1164.all;
+    use ieee.numeric_std.all;
+library work;
+    use work.seven_seg_pkg.all;
+
+entity dc_disp_ctrl is
+    port (
+        -- From top_level
+        clk                 : in std_logic;
+        reset               : in std_logic;
+        -- From pwm_ctrl
+        current_dc          : in std_logic_vector(7 downto 0);
+        current_dc_update   : in std_logic;
+
+        -- From serial_uart
+        transmit_ready      : in std_logic;
+
+        -- To serial_uart
+        transmit_data_valid : out std_logic;
+        transmit_data       : out std_logic_vector(7 downto 0);
+
+        -- To top_level
+        hex0_n              : out std_logic_vector(6 downto 0);
+        hex1_n              : out std_logic_vector(6 downto 0);
+        hex2_n              : out std_logic_vector(6 downto 0)
+
+    );
+end entity dc_disp_ctrl;
+
+architecture rtl of dc_disp_ctrl is
+
+    signal valid_transmit   : std_logic;
+    signal data_transmit    : std_logic_vector(7 downto 0);
+    signal max_byte_count   : integer := 5;
+        
+    signal byte_count       : integer range 0 to max_byte_count;
+    
+    signal hex0             : std_logic_vector(6 downto 0);
+    signal hex1             : std_logic_vector(6 downto 0);
+    signal hex2             : std_logic_vector(6 downto 0);
+
+    signal bcd_0            : std_logic_vector(3 downto 0);
+    signal bcd_1            : std_logic_vector(3 downto 0);
+    signal bcd_2            : std_logic_vector(3 downto 0);
+    signal valid_out        : std_logic;
+
+    function fn_bcd_to_ascii (
+        bcd : std_logic_vector(3 downto 0)
+    ) return std_logic_vector is
+    begin
+        return std_logic_vector(to_unsigned(unsigned(bcd)), 8);
+        -- return std_logic_vector(to_unsigned(to_integer(unsigned(bcd)), 8));
+    end function fn_bcd_to_ascii;
+
+    type transmit_state is (s_idle,
+                            s_first_byte,
+                            s_second_byte,
+                            s_third_byte,
+                            s_fourth_byte,
+                            s_fifth_byte);
+
+    signal current_transmit_state : transmit_state := s_idle;
+
+
+    signal update                   : std_logic;
+    signal stack                    : std_logic := '0';
+    signal bcd_stack1_0             : std_logic_vector(3 downto 0);
+    signal bcd_stack1_1             : std_logic_vector(3 downto 0);
+    signal bcd_stack1_2             : std_logic_vector(3 downto 0);
+
+    signal bcd_stack2_0             : std_logic_vector(3 downto 0);
+    signal bcd_stack2_1             : std_logic_vector(3 downto 0);
+    signal bcd_stack2_2             : std_logic_vector(3 downto 0);
+    
+    
+
+
+begin
+
+    transmit_data_valid <= valid_transmit;
+    transmit_data       <= data_transmit;
+
+    hex0_n <= hex0;
+    hex1_n <= hex1;
+    hex2_n <= hex2;
+
+    bcd_decode_rom : entity work.bcd_decode_rom
+    port map(
+        clk             => clk,
+        reset           => reset,
+        
+        input_vector    => current_dc,
+        valid_in        => current_dc_update,
+        ready           => open,
+
+        bcd_0           => bcd_0,
+        bcd_1           => bcd_1,
+        bcd_2           => bcd_2,
+        valid_out       => valid_out
+    );
+
+    -- -- A standard-logic vector, where bits mean anything
+    -- signal slv : std_logic_vector(7 downto 0) := X"0F";
+    
+    -- -- An unsigned integer, where bits mean positive numbers, eg., 0->255
+    -- signal u : unsigned(7 downto 0) := X"0F";
+    
+    -- -- Conversion of std_logic_vector to unsigned
+    -- u <= unsigned(slv);
+
+    -- -- Conversion of std_logic_vector to integer
+    -- ascii_char <= to_integer(unsigned(received_data));
+    
+    -- -- Conversion of unsigned to std_logic_vector
+    -- slv <= std_logic_vector(u);
+    
+    -- -- Conversion of an integer to unsigned of width 8-bits
+    -- u <= to_unsigned(123, 8);
+    
+    -- -- Conversion of an integer to std_logic_vector
+    -- slv <= std_logic_vector(to_unsigned(123, 8));
+
+    p_dc_disp : process(clk, reset)
+    begin
+        if rising_edge(clk) then
+            
+            if valid_out = '1'  then
+                hex0 <= fn_ascii_to_7seg(fn_bcd_to_ascii(bcd_0));
+                hex1 <= fn_ascii_to_7seg(fn_bcd_to_ascii(bcd_1));
+                hex2 <= fn_ascii_to_7seg(fn_bcd_to_ascii(bcd_2));
+
+                if current_transmit_state /= s_idle then --Transmit in progress
+                    bcd_stack2_0    <= bcd_0;
+                    bcd_stack2_1    <= bcd_1;
+                    bcd_stack2_2    <= bcd_2;
+                    stack           <= '1';
+                else -- idle state
+                    bcd_stack1_0    <= bcd_0;
+                    bcd_stack1_1    <= bcd_1;
+                    bcd_stack1_2    <= bcd_2;
+                    stack           <= '0';
+                end if;
+                update <= '1';
+            end if;
+
+            
+            if transmit_ready = '1' then
+                valid_transmit <= '0';
+                
+                case current_transmit_state is
+                    when s_idle =>
+                        if stack = '1' then
+                            bcd_stack1_0    <= bcd_stack2_0;
+                            bcd_stack1_1    <= bcd_stack2_1;
+                            bcd_stack1_2    <= bcd_stack2_2;
+                            stack           <= '0';
+                        end if;
+                        if update = '1' then
+                            current_transmit_state <= s_first_byte;
+                        end if;
+
+                    
+                    when s_first_byte =>
+                        if to_integer(fn_bcd_to_ascii(bcd_stack1_0)) = 0 then
+                            data_transmit       <= "00100000"; -- " " (Space)
+                        else
+                            data_transmit       <= fn_bcd_to_ascii(bcd_stack1_0);
+                        end if;
+                        valid_transmit <= '1';
+                        current_transmit_state  <= s_second_byte;
+                            
+                    when s_second_byte =>
+                        if to_integer(fn_bcd_to_ascii(bcd_stack1_1)) = 0 then
+                            data_transmit       <= "00100000"; -- " " (Space)
+                        else
+                            data_transmit       <= fn_bcd_to_ascii(bcd_stack1_1);
+                        end if;
+                        valid_transmit <= '1';
+                        current_transmit_state  <= s_third_byte;
+                    
+                    when s_third_byte =>
+                        data_transmit           <= fn_bcd_to_ascii(bcd_stack1_2);
+                        valid_transmit <= '1';
+                        current_transmit_state  <= s_fourth_byte;
+                    
+                    when s_fourth_byte =>
+                        data_transmit           <= "00100101"; -- %
+                        valid_transmit <= '1';
+                        current_transmit_state  <= s_fifth_byte;
+                    
+                    when s_fifth_byte =>
+                        data_transmit           <= "00001101"; -- CR (Carrige return)
+                        valid_transmit <= '1';
+                        current_transmit_state  <= s_idle;
+
+                        if stack = '1' then
+                            update <= '1';
+                        else 
+                            update <= '0';
+                        end if;
+                    
+                    when others =>
+                        null;
+                end case;
+            end if;
+    
+                
+                -- hex0 <= fn_ascii_to_7seg(std_logic_vector(to_unsigned(to_integer(unsigned(bcd_0)), 8)));
+                -- hex1 <= fn_ascii_to_7seg(std_logic_vector(to_unsigned(to_integer(unsigned(bcd_1)), 8)));
+                -- hex2 <= fn_ascii_to_7seg(std_logic_vector(to_unsigned(to_integer(unsigned(bcd_2)), 8)));
+            -- end if;                
+        end if;
+        if reset = '1' then
+            stack <= '0';
+
+
+            hex0 <= fn_ascii_to_7seg("00110000"); -- 0
+            hex1 <= fn_ascii_to_7seg("00110000"); -- 0
+            hex2 <= fn_ascii_to_7seg("00110000"); -- 0
+            -- hex0 <= fn_ascii_to_7seg("00110000");
+            -- hex1 <= (others => '1');
+            -- hex2 <= (others => '1');
+
+            if transmit_ready = '1' then
+                valid_transmit <= '0';
+                
+                case current_transmit_state is
+                    when s_idle =>
+                        current_transmit_state <= s_first_byte;
+                    
+                    when s_first_byte =>
+                        data_transmit           <= "00100000"; -- " " (Space)
+                        -- data_transmit           <= std_logic_vector(to_unsigned(32, data_transmit'length))
+                        valid_transmit          <= '1';
+                        current_transmit_state  <= s_second_byte;
+                            
+                    when s_second_byte =>
+                        data_transmit           <= "00100000"; -- " " (Space)
+                        valid_transmit          <= '1';
+                        current_transmit_state  <= s_third_byte;
+                    
+                    when s_third_byte =>
+                        data_transmit           <= "00110000"; -- 0
+                        valid_transmit          <= '1';
+                        current_transmit_state  <= s_fourth_byte;
+                    
+                    when s_fourth_byte =>
+                        data_transmit           <= "00100101"; -- %
+                        valid_transmit          <= '1';
+                        current_transmit_state  <= s_fifth_byte;
+                    
+                    when s_fifth_byte =>
+                        data_transmit           <= "00001101"; -- CR (Carrige return)
+                        valid_transmit          <= '1';
+                        current_transmit_state  <= s_idle;
+                    
+                    when others =>
+                        null;
+                end case;
+            end if;
+                
+        end if;
+        
+    end process p_dc_disp;
+
+end architecture rtl;

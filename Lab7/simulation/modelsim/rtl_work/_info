@@ -1,0 +1,464 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\martin\OneDrive\Documents\JU_online\Digitalteknik\Labbar\Lab7\simulation\modelsim
+Ealtera_pll
+Z1 w1684158162
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\martin\OneDrive\Documents\JU_online\Digitalteknik\Labbar\Lab7\simulation\modelsim
+Z5 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/altera_pll_cyclone2.vhd
+Z6 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/altera_pll_cyclone2.vhd
+l0
+L42
+VgoFkEzXlUegbo9QGz7O6o3
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1687200633.693000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/altera_pll_cyclone2.vhd|
+Z10 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/altera_pll_cyclone2.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 KfUf0fhbB824<lceIQd<d0
+!i10b 1
+Asyn
+R2
+R3
+Z13 DEx4 work 10 altera_pll 0 22 goFkEzXlUegbo9QGz7O6o3
+l143
+L55
+VVFA1mCgDU5VD?<_b4HmNC0
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 oe?I_>fJ86APBoA`iKDz71
+!i10b 1
+Ebcd_decode_rom
+Z14 w1684244339
+Z15 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z16 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/bcd_decode_rom_rtl.vhd
+Z17 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/bcd_decode_rom_rtl.vhd
+l0
+L16
+Vl_Lc?7`_=>S8XEEiiEmNl3
+R7
+31
+Z18 !s108 1687200633.800000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/bcd_decode_rom_rtl.vhd|
+Z20 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/bcd_decode_rom_rtl.vhd|
+R11
+R12
+!s100 Mj>3GIeI1=`FgWShnW^f_3
+!i10b 1
+Artl
+R15
+R2
+R3
+Z21 DEx4 work 14 bcd_decode_rom 0 22 l_Lc?7`_=>S8XEEiiEmNl3
+l85
+L34
+V1@n@W<SfzAFO^mIP6ilVf2
+R7
+31
+R18
+R19
+R20
+R11
+R12
+!s100 4GgdmcQ;mQl4_YD86U6922
+!i10b 1
+Edc_disp_ctrl
+Z22 w1686830928
+Z23 DPx4 work 13 seven_seg_pkg 0 22 lFhfkUeO7J;iXhG<8m51K1
+R15
+R2
+R3
+R4
+Z24 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/dc_disp_ctrl.vhd
+Z25 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/dc_disp_ctrl.vhd
+l0
+L7
+VB5ZW^cIBOUg]mafGA2WXD3
+R7
+31
+Z26 !s108 1687200634.484000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/dc_disp_ctrl.vhd|
+Z28 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/dc_disp_ctrl.vhd|
+R11
+R12
+!s100 Zbc0@z[7=]c79KDVBeon[1
+!i10b 1
+Artl
+R21
+R23
+R15
+R2
+R3
+Z29 DEx4 work 12 dc_disp_ctrl 0 22 B5ZW^cIBOUg]mafGA2WXD3
+l103
+L31
+VmY2EhO6@W>G:en^TSY:9?3
+R7
+31
+R26
+R27
+R28
+R11
+R12
+!s100 5@lBcG>AJ9FgZ^[cQ=2oR1
+!i10b 1
+Ekey_ctrl
+Z30 w1686743124
+R15
+R2
+R3
+R4
+Z31 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/key_ctrl.vhd
+Z32 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/key_ctrl.vhd
+l0
+L5
+VQFZXAf5X<_MGcHel3EIc62
+R7
+31
+Z33 !s108 1687200633.896000
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/key_ctrl.vhd|
+Z35 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/key_ctrl.vhd|
+R11
+R12
+!s100 6ENF5O@odgNBR>3mO=Rkm3
+!i10b 1
+Artl
+R15
+R2
+R3
+Z36 DEx4 work 8 key_ctrl 0 22 QFZXAf5X<_MGcHel3EIc62
+l35
+L20
+VXJl<Kk6l`m2G_0i0nT:1F1
+R7
+31
+R33
+R34
+R35
+R11
+R12
+!s100 NjE025z^0DQV8e9Pb;<X40
+!i10b 1
+Epwm_ctrl
+Z37 w1686745283
+R15
+R2
+R3
+R4
+Z38 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/pwm_ctrl.vhd
+Z39 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/pwm_ctrl.vhd
+l0
+L5
+V9T40U4Y7S^Ng0IOgP7nGW3
+R7
+31
+Z40 !s108 1687200634.403000
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/pwm_ctrl.vhd|
+Z42 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/pwm_ctrl.vhd|
+R11
+R12
+!s100 MiV4SDBDJ0a9ibVIILSDf3
+!i10b 1
+Artl
+R15
+R2
+R3
+Z43 DEx4 work 8 pwm_ctrl 0 22 9T40U4Y7S^Ng0IOgP7nGW3
+l43
+L32
+V`haF0>h5FGI8D=]Tco`aN0
+R7
+31
+R40
+R41
+R42
+R11
+R12
+!s100 ;@z<icc3jZkjg:ijk0ETU0
+!i10b 1
+Epwm_module
+Z44 w1686155116
+R15
+R2
+R3
+R4
+Z45 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/pwm_top_level.vhd
+Z46 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/pwm_top_level.vhd
+l0
+L6
+VaVWnd_fk35[>QlbPJVU>T0
+R7
+31
+Z47 !s108 1687200634.568000
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/pwm_top_level.vhd|
+Z49 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/pwm_top_level.vhd|
+R11
+R12
+!s100 [5AQFNfiPm[enj6a0eJdZ3
+!i10b 1
+Artl
+Z50 DEx4 work 10 reset_ctrl 0 22 Q4_ISz?@[:0jjj0hcY5bK3
+R13
+R23
+R29
+R36
+R43
+Z51 DEx4 work 11 serial_ctrl 0 22 hT9W;c;MZA?D6@?B`?:X=3
+Z52 DEx4 work 11 serial_uart 0 22 ><[JeloQ^na4Q6I9_O8nM2
+R15
+R2
+R3
+Z53 DEx4 work 10 pwm_module 0 22 aVWnd_fk35[>QlbPJVU>T0
+l52
+L26
+V8NRNT<PNga>c[CR_z6XCe2
+R7
+31
+R47
+R48
+R49
+R11
+R12
+!s100 CTlh`z>3hA^K0TLJea8O@0
+!i10b 1
+Ereset_ctrl
+Z54 w1684361677
+R2
+R3
+R4
+Z55 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/reset_ctrl_rtl.vhd
+Z56 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/reset_ctrl_rtl.vhd
+l0
+L17
+VQ4_ISz?@[:0jjj0hcY5bK3
+R7
+31
+Z57 !s108 1687200633.998000
+Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/reset_ctrl_rtl.vhd|
+Z59 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/reset_ctrl_rtl.vhd|
+R11
+R12
+!s100 F@UjI>06hV5KAi8zL7=Zj1
+!i10b 1
+Artl
+R2
+R3
+R50
+l31
+L29
+VmjGB?XRdTdB1PT=DVI8:a1
+R7
+31
+R57
+R58
+R59
+R11
+R12
+!s100 OQC1`XSGGQF]WL<mM?]OL2
+!i10b 1
+Eserial_ctrl
+Z60 w1686743162
+R15
+R2
+R3
+R4
+Z61 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/serial_ctrl.vhd
+Z62 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/serial_ctrl.vhd
+l0
+L5
+VhT9W;c;MZA?D6@?B`?:X=3
+R7
+31
+Z63 !s108 1687200634.074000
+Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/serial_ctrl.vhd|
+Z65 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/serial_ctrl.vhd|
+R11
+R12
+!s100 ?d9BZRid7i;[<cc<moRbK3
+!i10b 1
+Artl
+R15
+R2
+R3
+R51
+l25
+L23
+VGP^C]^kAC@zMR5K@dJJcS3
+R7
+31
+R63
+R64
+R65
+R11
+R12
+!s100 kmQdNg9[I7ko84OVAPc@J2
+!i10b 1
+Eserial_uart
+Z66 w1685991511
+R2
+R3
+R4
+Z67 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/serial_uart_rtl.vhd
+Z68 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/serial_uart_rtl.vhd
+l0
+L21
+V><[JeloQ^na4Q6I9_O8nM2
+R7
+31
+Z69 !s108 1687200634.212000
+Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/serial_uart_rtl.vhd|
+Z71 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/serial_uart_rtl.vhd|
+R11
+R12
+!s100 Dg_Jlfhn9Q`MZAWbgmDBQ0
+!i10b 1
+Artl
+R2
+R3
+R52
+l87
+L43
+Vo0E2H7bNNF1fM8>TC8U@Z1
+R7
+31
+R69
+R70
+R71
+R11
+R12
+!s100 WFalOJf]i<f80_68[N7g?0
+!i10b 1
+Pseven_seg_pkg
+R15
+R2
+R3
+Z72 w1683989431
+R4
+Z73 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/seven_seg_pkg.vhd
+Z74 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/seven_seg_pkg.vhd
+l0
+L5
+VlFhfkUeO7J;iXhG<8m51K1
+R7
+31
+b1
+Z75 !s108 1687200634.307000
+Z76 !s90 -reportprogress|300|-93|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/seven_seg_pkg.vhd|
+Z77 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/seven_seg_pkg.vhd|
+R11
+R12
+!s100 EjTFPMlzE2Nd[_UBMSKz:3
+!i10b 1
+Bbody
+R23
+R15
+R2
+R3
+l0
+L23
+VUBE=O;2=GXKA^zz5JXmTO2
+R7
+31
+R75
+R76
+R77
+R11
+R12
+nbody
+!s100 kbzLIlBGGG<VZHNN_A>462
+!i10b 1
+Ptestbench_pkg
+R15
+R2
+R3
+Z78 w1684158160
+R4
+Z79 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/testbench_pkg.vhd
+Z80 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/testbench_pkg.vhd
+l0
+L16
+V_TO2hgS8cO^P2iJTQf3SL1
+R7
+32
+b1
+Z81 !s108 1687200835.426000
+Z82 !s90 -reportprogress|300|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/testbench_pkg.vhd|
+Z83 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/testbench_pkg.vhd|
+Z84 o-work work -O0
+R12
+!s100 llJ:WKVDQ0[d?RPk4Y?iL1
+!i10b 1
+Bbody
+Z85 DPx4 work 13 testbench_pkg 0 22 _TO2hgS8cO^P2iJTQf3SL1
+R15
+R2
+R3
+l0
+L69
+VN3cESVYP6Wnok6Mck2<9]3
+R7
+32
+R81
+R82
+R83
+R84
+R12
+nbody
+!s100 jF]nc=z0B[iV]zWDhjgNV0
+!i10b 1
+Etestbench_top
+Z86 w1684955607
+R85
+Z87 DPx4 ieee 9 math_real 0 22 :iME`dTX54_U49lJNF5JI3
+R15
+R2
+R3
+R4
+Z88 8C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/testbench_top.vhd
+Z89 FC:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/testbench_top.vhd
+l0
+L26
+VB>B^P?^Km<A3i><3m[dQ72
+!s100 M4E0F@:H:@zn7?zEg5b]V2
+R7
+32
+!i10b 1
+Z90 !s108 1687200836.968000
+Z91 !s90 -reportprogress|300|-work|work|C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/testbench_top.vhd|
+Z92 !s107 C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/testbench_top.vhd|
+R84
+R12
+Abhv
+R52
+R53
+R85
+R87
+R15
+R2
+R3
+DEx4 work 13 testbench_top 0 22 B>B^P?^Km<A3i><3m[dQ72
+l157
+L29
+V`G33zYU6gEl;K5h0bhP3h0
+!s100 DV=;^6fL0AGGdh;Kj6fTW3
+R7
+32
+!i10b 1
+R90
+R91
+R92
+R84
+R12

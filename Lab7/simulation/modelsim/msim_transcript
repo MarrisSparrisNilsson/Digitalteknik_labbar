@@ -1,0 +1,365 @@
+# Reading E:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do top_level_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/altera_pll_cyclone2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity altera_pll
+# -- Compiling architecture SYN of altera_pll
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/bcd_decode_rom_rtl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bcd_decode_rom
+# -- Compiling architecture rtl of bcd_decode_rom
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/key_ctrl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity key_ctrl
+# -- Compiling architecture rtl of key_ctrl
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/reset_ctrl_rtl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reset_ctrl
+# -- Compiling architecture rtl of reset_ctrl
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/serial_ctrl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity serial_ctrl
+# -- Compiling architecture rtl of serial_ctrl
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/serial_uart_rtl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity serial_uart
+# -- Compiling architecture rtl of serial_uart
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/seven_seg_pkg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package seven_seg_pkg
+# -- Compiling package body seven_seg_pkg
+# -- Loading package seven_seg_pkg
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/pwm_ctrl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm_ctrl
+# -- Compiling architecture rtl of pwm_ctrl
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/dc_disp_ctrl.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package seven_seg_pkg
+# -- Compiling entity dc_disp_ctrl
+# -- Compiling architecture rtl of dc_disp_ctrl
+# -- Loading entity bcd_decode_rom
+# vcom -93 -work work {C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/pwm_top_level.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pwm_module
+# -- Compiling architecture rtl of pwm_module
+# -- Loading entity serial_uart
+# -- Loading entity serial_ctrl
+# -- Loading entity pwm_ctrl
+# -- Loading entity key_ctrl
+# -- Loading package seven_seg_pkg
+# -- Loading entity dc_disp_ctrl
+# -- Loading entity altera_pll
+# -- Loading entity reset_ctrl
+# 
+vcom -reportprogress 300 -work work C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/testbench_pkg.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package testbench_pkg
+# -- Compiling package body testbench_pkg
+# -- Loading package testbench_pkg
+vcom -reportprogress 300 -work work C:/Users/martin/OneDrive/Documents/JU_online/Digitalteknik/Labbar/Lab7/testbench_top.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package testbench_pkg
+# -- Compiling entity testbench_top
+# -- Compiling architecture bhv of testbench_top
+# -- Loading entity pwm_module
+# -- Loading entity serial_uart
+vsim work.testbench_top
+# vsim work.testbench_top 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.testbench_pkg(body)
+# Loading work.testbench_top(bhv)
+# Loading work.seven_seg_pkg(body)
+# Loading work.pwm_module(rtl)
+# Loading work.serial_uart(rtl)
+# Loading work.serial_ctrl(rtl)
+# Loading work.pwm_ctrl(rtl)
+# Loading work.key_ctrl(rtl)
+# Loading work.dc_disp_ctrl(rtl)
+# Loading work.bcd_decode_rom(rtl)
+add wave -position end  sim:/testbench_top/clock_50
+add wave -position end  sim:/testbench_top/reset_n
+add wave -position end  sim:/testbench_top/kill_clock
+add wave -position end  sim:/testbench_top/serial_received_data
+add wave -position end  sim:/testbench_top/serial_received_data_valid
+add wave -position end  sim:/testbench_top/serial_received_error
+add wave -position end  sim:/testbench_top/serial_received_parity_error
+add wave -position end  sim:/testbench_top/serial_transmit_ready
+add wave -position end  sim:/testbench_top/serial_transmit_data_valid
+add wave -position end  sim:/testbench_top/serial_transmit_data
+add wave -position end  sim:/testbench_top/key_n
+add wave -position end  sim:/testbench_top/fpga_in_rx
+add wave -position end  sim:/testbench_top/fpga_out_tx
+add wave -position end  sim:/testbench_top/ledr
+add wave -position end  sim:/testbench_top/ledg
+add wave -position end  sim:/testbench_top/hex0_n
+add wave -position end  sim:/testbench_top/hex1_n
+add wave -position end  sim:/testbench_top/hex2_n
+add wave -position end  sim:/testbench_top/dut_pwm
+add wave -position end  sim:/testbench_top/dut_pwm_r
+add wave -position end  sim:/testbench_top/detected_dc
+add wave -position end  sim:/testbench_top/detected_freq
+add wave -position end  sim:/testbench_top/hex_dc_valid
+add wave -position end  sim:/testbench_top/hex_dc_detected
+add wave -position end  sim:/testbench_top/uart_recv_state
+add wave -position end  sim:/testbench_top/dc_save
+add wave -position end  sim:/testbench_top/serial_detected_dc
+add wave -position end  sim:/testbench_top/serial_dc_valid
+add wave -position end  sim:/testbench_top/serial_dc_update
+add wave -position end  sim:/testbench_top/serial_dc_error
+add wave -position end  sim:/testbench_top/current_test_case_no
+add wave -position end  sim:/testbench_top/key_on_n
+add wave -position end  sim:/testbench_top/key_off_n
+add wave -position end  sim:/testbench_top/key_up_n
+add wave -position end  sim:/testbench_top/key_down_n
+add wave -position end  sim:/testbench_top/saved_detected_dc
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: martin  Hostname: MARTINS-PC  ProcessID: 27060
+# 
+#           Attempting to use alternate WLF file "./wlftw1zr7n".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftw1zr7n
+# 
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/clk
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/reset
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/rx
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/tx
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/received_data
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/received_data_valid
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/received_error
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/received_parity_error
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/transmit_ready
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/transmit_data_valid
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/transmit_data
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/rx_r
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/rx_2r
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/reset_r
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/reset_2r
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/rx_state
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/rx_byte_int
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/rx_bit_no
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/rx_parity_toggle
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/rx_bit_cnt
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/rx_bit_cnt_en
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/rx_bit_cnt_wrap
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/rx_bit_cnt_half
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/tx_bit_cnt
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/tx_bit_cnt_en
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/tx_bit_cnt_wrap
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/tx_state
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/transmit_ready_int
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/tx_bit_no
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/tx_byte_saved
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_uart/tx_parity_bit
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_ctrl/clk
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_ctrl/reset
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_ctrl/received_data
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_ctrl/received_data_valid
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_ctrl/serial_on
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_ctrl/serial_off
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_ctrl/serial_up
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_ctrl/serial_down
+add wave -position end  sim:/testbench_top/i_pwm_module/serial_ctrl/ascii_char
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/clk
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/reset
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/key_off
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/key_on
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/key_down
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/key_up
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/serial_off
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/serial_on
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/serial_down
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/serial_up
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/current_dc
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/current_dc_update
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/ledg
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/counter
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/dc_count
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/prev_dc
+add wave -position end  sim:/testbench_top/i_pwm_module/pwm_ctrl/current_dc_state
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/clk
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/reset
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/key_n
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/key_off
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/key_on
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/key_down
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/key_up
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/key_r
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/key_2r
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/off_key
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/on_key
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/down_key
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/up_key
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/pulse_counter
+add wave -position end  sim:/testbench_top/i_pwm_module/key_ctrl/is_held_down
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/clk
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/reset
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/current_dc
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/current_dc_update
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/transmit_ready
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/transmit_data_valid
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/transmit_data
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/hex0_n
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/hex1_n
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/hex2_n
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/valid_transmit
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/data_transmit
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/hex0
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/hex1
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/hex2
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/bcd_0
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/bcd_1
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/bcd_2
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/valid_out
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/current_transmit_state
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/update
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/stack
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/bcd_stack1_0
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/bcd_stack1_1
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/bcd_stack1_2
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/bcd_stack2_0
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/bcd_stack2_1
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/bcd_stack2_2
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/reset_transmission_active
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/transmission_started
+add wave -position end  sim:/testbench_top/i_pwm_module/dc_disp_ctrl/transmission_finished
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_top/i_pwm_module/serial_ctrl
+# Simulation starts
+# Test case #0 - Check startup values - expect 0 %
+#       Serial interface reports duty cycle : 0% - OK
+#       Detected PWM output duty cycle : 0% - OK!
+#       Detected 7 segment output duty cycle : 0% - OK!
+#    Test case #0 - PASS.
+# Test case #1 - Key control - ON - expect 100 %
+#       Serial interface reports duty cycle : 100% - OK
+#       Detected PWM output duty cycle : 100% - OK!
+#       Detected 7 segment output duty cycle : 100% - OK!
+#    Test case #1 - PASS.
+# Test case #2 - Key control - OFF - expect 0%
+#       Serial interface reports duty cycle : 0% - OK
+#       Detected PWM output duty cycle : 0% - OK!
+#       Detected 7 segment output duty cycle : 0% - OK!
+#    Test case #2 - PASS.
+# Test case #3 - Key control - UP - should set Duty Cycle to 10%
+#       Serial interface reports duty cycle : 10% - OK
+#       Detected PWM output duty cycle : 10% - OK!
+#       Detected 7 segment output duty cycle : 10% - OK!
+#    Test case #3 - PASS.
+# Test case #4 - Check 1kHz PWM frequency (+/- 1 Hz)
+#       Detected PWM frequency : 1000 Hz
+#    Test case #4 - PASS.
+# Test case #5 - Key hold control - UP 50 ms to ~15 % Duty cycle
+#       Serial interface reports duty cycle : 15% - OK
+#       Detected PWM output duty cycle : 15% - OK!
+#       Detected 7 segment output duty cycle : 15% - OK!
+#    Test case #5 - PASS.
+# Test case #6 - Key control - DOWN 5 ms to decrease Duty cycle with 1 %
+#       Serial interface reports duty cycle : 14% - OK
+#       Detected PWM output duty cycle : 14% - OK!
+#       Detected 7 segment output duty cycle : 14% - OK!
+#    Test case #6 - PASS.
+# Test case #7 - Key hold control - DOWN 70 ms to decrease Duty cycle to minimum (10 %)
+#       Serial interface reports duty cycle : 10% - OK
+#       Detected PWM output duty cycle : 10% - OK!
+#       Detected 7 segment output duty cycle : 10% - OK!
+#    Test case #7 - PASS.
+# Test case #8 - Serial control - Up by sending U in ASCII, expecting 11 %
+#       Serial interface reports duty cycle : 11% - OK
+#       Detected PWM output duty cycle : 11% - OK!
+#       Detected 7 segment output duty cycle : 11% - OK!
+#    Test case #8 - PASS.
+# Test case #9 - Serial control - Up by sending u in ASCII, expecting 12 %
+#       Serial interface reports duty cycle : 12% - OK
+#       Detected PWM output duty cycle : 12% - OK!
+#       Detected 7 segment output duty cycle : 12% - OK!
+#    Test case #9 - PASS.
+# Test case #10 - Serial control - Off by sending 0 in ASCII, expecting 0 %
+#       Serial interface reports duty cycle : 0% - OK
+#       Detected PWM output duty cycle : 0% - OK!
+#       Detected 7 segment output duty cycle : 0% - OK!
+#    Test case #10 - PASS.
+# Test case #11 - Serial control - ON by sending 1 in ASCII, expecting 12 % (remembered)
+#       Serial interface reports duty cycle : 12% - OK
+#       Detected PWM output duty cycle : 12% - OK!
+#       Detected 7 segment output duty cycle : 12% - OK!
+#    Test case #11 - PASS.
+# Test case #12 - Serial control - DOWN by sending d in ASCII, expecting 11 %
+#       Serial interface reports duty cycle : 11% - OK
+#       Detected PWM output duty cycle : 11% - OK!
+#       Detected 7 segment output duty cycle : 11% - OK!
+#    Test case #12 - PASS.
+# Test case #13 - Serial control - DOWN by sending D in ASCII, expecting 10 %
+#       Serial interface reports duty cycle : 10% - OK
+#       Detected PWM output duty cycle : 10% - OK!
+#       Detected 7 segment output duty cycle : 10% - OK!
+#    Test case #13 - PASS.
+# Test case #14 - Serial control - DOWN by sending D in ASCII, expecting 10 %
+#       Serial interface reports duty cycle : 10% - OK
+#       Detected PWM output duty cycle : 10% - OK!
+#       Detected 7 segment output duty cycle : 10% - OK!
+#    Test case #14 - PASS.
+# Simulation ends

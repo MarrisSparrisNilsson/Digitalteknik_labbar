@@ -1,0 +1,24 @@
+
+State Machine - |pwm_module|dc_disp_ctrl:dc_disp_ctrl|current_transmit_state
+Name current_transmit_state.s_fifth_byte current_transmit_state.s_fourth_byte current_transmit_state.s_third_byte current_transmit_state.s_second_byte current_transmit_state.s_first_byte current_transmit_state.s_idle 
+current_transmit_state.s_idle 0 0 0 0 0 0 
+current_transmit_state.s_first_byte 0 0 0 0 1 1 
+current_transmit_state.s_second_byte 0 0 0 1 0 1 
+current_transmit_state.s_third_byte 0 0 1 0 0 1 
+current_transmit_state.s_fourth_byte 0 1 0 0 0 1 
+current_transmit_state.s_fifth_byte 1 0 0 0 0 1 
+
+State Machine - |pwm_module|serial_uart:serial_uart|tx_state
+Name tx_state.s_stop_bit tx_state.s_parity tx_state.s_tx_data tx_state.s_start_bit tx_state.s_idle 
+tx_state.s_idle 0 0 0 0 0 
+tx_state.s_start_bit 0 0 0 1 1 
+tx_state.s_tx_data 0 0 1 0 1 
+tx_state.s_parity 0 1 0 0 1 
+tx_state.s_stop_bit 1 0 0 0 1 
+
+State Machine - |pwm_module|serial_uart:serial_uart|rx_state
+Name rx_state.s_stop_bit rx_state.s_parity rx_state.s_rx_data rx_state.s_idle 
+rx_state.s_idle 0 0 0 0 
+rx_state.s_rx_data 0 0 1 1 
+rx_state.s_parity 0 1 0 1 
+rx_state.s_stop_bit 1 0 0 1 

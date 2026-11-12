@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup '\b_gen_pll:i_altera_pll|altpll_component|pll|clk[1]'
+Slack : 13.812
+TNS   : 0.000
+
+Type  : Slow Model Hold '\b_gen_pll:i_altera_pll|altpll_component|pll|clk[1]'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Recovery '\b_gen_pll:i_altera_pll|altpll_component|pll|clk[1]'
+Slack : 17.018
+TNS   : 0.000
+
+Type  : Slow Model Removal '\b_gen_pll:i_altera_pll|altpll_component|pll|clk[1]'
+Slack : 1.209
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width '\b_gen_pll:i_altera_pll|altpll_component|pll|clk[1]'
+Slack : 8.077
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clock_50'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Fast Model Setup '\b_gen_pll:i_altera_pll|altpll_component|pll|clk[1]'
+Slack : 17.095
+TNS   : 0.000
+
+Type  : Fast Model Hold '\b_gen_pll:i_altera_pll|altpll_component|pll|clk[1]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery '\b_gen_pll:i_altera_pll|altpll_component|pll|clk[1]'
+Slack : 18.502
+TNS   : 0.000
+
+Type  : Fast Model Removal '\b_gen_pll:i_altera_pll|altpll_component|pll|clk[1]'
+Slack : 0.663
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width '\b_gen_pll:i_altera_pll|altpll_component|pll|clk[1]'
+Slack : 8.077
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clock_50'
+Slack : 10.000
+TNS   : 0.000
+
+------------------------------------------------------------
