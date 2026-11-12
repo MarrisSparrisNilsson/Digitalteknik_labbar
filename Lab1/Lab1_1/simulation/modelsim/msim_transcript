@@ -1,0 +1,196 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Lab1_1_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/marti/JU/Digitalteknik/Labbar/Lab1/Lab1_1/top_level.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# 
+vsim work.top_level
+# vsim work.top_level 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_level(rtl)
+add wave -position end  sim:/top_level/sw0
+add wave -position end  sim:/top_level/sw1
+add wave -position end  sim:/top_level/sw2
+add wave -position end  sim:/top_level/sw3
+add wave -position end  sim:/top_level/sw4
+add wave -position end  sim:/top_level/sw5
+add wave -position end  sim:/top_level/sw6
+add wave -position end  sim:/top_level/sw7
+add wave -position end  sim:/top_level/ledr0
+do ../../output_files/run_sim_lab1_1.do
+# ** Error: reset: unknown option -- f
+# Usage: tset [options] [terminal]
+# 
+# Options:
+#   -c          set control characters
+#   -e ch       erase character
+#   -I          no initialization strings
+#   -i ch       interrupt character
+#   -k ch       kill character
+#   -m mapping  map identifier to type
+#   -Q          do not output control key settings
+#   -q          display term only, do no changes
+#   -r          display term on stderr
+#   -s          output TERM set command
+#   -V          print curses-version
+#   -w          set window-size
+# 
+# If neither -c/-w are given, both are assumed.
+# Error in macro ./../../output_files/run_sim_lab1_1.do line 1
+# reset: unknown option -- f
+# Usage: tset [options] [terminal]
+# 
+# Options:
+#   -c          set control characters
+#   -e ch       erase character
+#   -I          no initialization strings
+#   -i ch       interrupt character
+#   -k ch       kill character
+#   -m mapping  map identifier to type
+#   -Q          do not output control key settings
+#   -q          display term only, do no changes
+#   -r          display term on stderr
+#   -s          output TERM set command
+#   -V          print curses-version
+#   -w          set window-size
+# 
+# If neither -c/-w are given, both are assumed.
+#     while executing
+# "exec C:/msys64/usr/bin/reset.EXE -f"
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 exec $redir $new [lrange $args 1 end]"
+#     (procedure "::unknown" line 115)
+#     invoked from within
+# "reset -f"
+#  Trace back: can't use empty string as operand of "+"
+#     while executing
+# "expr {[lindex [$win bbox cBegin] 1] + [winfo rooty $win]}"
+#     (procedure "Transcript::CmdCompletion" line 43)
+#     invoked from within
+# "Transcript::CmdCompletion $w [$w get cBegin insert]"
+#     (procedure "Transcript::KeyPress" line 24)
+#     invoked from within
+# "Transcript::KeyPress .main_pane.transcript.interior.cs.body.t {} Alt_L "
+#     (command bound to event) 
+#    <2: ::tkerror {can't use empty string as operand of "+"} 
+#    <1: ::bgerror {can't use empty string as operand of "+"} 
+do ../../output_files/run_sim_lab1_1.do
+# ** Error: reset: unknown option -- f
+# Usage: tset [options] [terminal]
+# 
+# Options:
+#   -c          set control characters
+#   -e ch       erase character
+#   -I          no initialization strings
+#   -i ch       interrupt character
+#   -k ch       kill character
+#   -m mapping  map identifier to type
+#   -Q          do not output control key settings
+#   -q          display term only, do no changes
+#   -r          display term on stderr
+#   -s          output TERM set command
+#   -V          print curses-version
+#   -w          set window-size
+# 
+# If neither -c/-w are given, both are assumed.
+# Error in macro ./../../output_files/run_sim_lab1_1.do line 1
+# reset: unknown option -- f
+# Usage: tset [options] [terminal]
+# 
+# Options:
+#   -c          set control characters
+#   -e ch       erase character
+#   -I          no initialization strings
+#   -i ch       interrupt character
+#   -k ch       kill character
+#   -m mapping  map identifier to type
+#   -Q          do not output control key settings
+#   -q          display term only, do no changes
+#   -r          display term on stderr
+#   -s          output TERM set command
+#   -V          print curses-version
+#   -w          set window-size
+# 
+# If neither -c/-w are given, both are assumed.
+#     while executing
+# "exec C:/msys64/usr/bin/reset.EXE -f"
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 exec $redir $new [lrange $args 1 end]"
+#     (procedure "::unknown" line 115)
+#     invoked from within
+# "reset -f"
+vcom -reportprogress 300 -work work C:/Users/marti/JU/Digitalteknik/Labbar/Lab1/Lab1_1/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+do ../../output_files/run_sim_lab1_1.do
+# ** Error: reset: unknown option -- f
+# Usage: tset [options] [terminal]
+# 
+# Options:
+#   -c          set control characters
+#   -e ch       erase character
+#   -I          no initialization strings
+#   -i ch       interrupt character
+#   -k ch       kill character
+#   -m mapping  map identifier to type
+#   -Q          do not output control key settings
+#   -q          display term only, do no changes
+#   -r          display term on stderr
+#   -s          output TERM set command
+#   -V          print curses-version
+#   -w          set window-size
+# 
+# If neither -c/-w are given, both are assumed.
+# Error in macro ./../../output_files/run_sim_lab1_1.do line 1
+# reset: unknown option -- f
+# Usage: tset [options] [terminal]
+# 
+# Options:
+#   -c          set control characters
+#   -e ch       erase character
+#   -I          no initialization strings
+#   -i ch       interrupt character
+#   -k ch       kill character
+#   -m mapping  map identifier to type
+#   -Q          do not output control key settings
+#   -q          display term only, do no changes
+#   -r          display term on stderr
+#   -s          output TERM set command
+#   -V          print curses-version
+#   -w          set window-size
+# 
+# If neither -c/-w are given, both are assumed.
+#     while executing
+# "exec C:/msys64/usr/bin/reset.EXE -f"
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 exec $redir $new [lrange $args 1 end]"
+#     (procedure "::unknown" line 115)
+#     invoked from within
+# "reset -f"
+do ../../output_files/run_sim_lab1_1.do
+# Loading work.top_level(rtl)
+do ../../output_files/run_sim_lab1_1.do
+do ../../output_files/run_sim_lab1_1.do

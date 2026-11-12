@@ -1,0 +1,10 @@
+reset -f
+
+force sw0 0
+force sw1 0
+force sw2 0
+force sw3 0
+force sw4 0
+force sw5 0
+force sw6 0
+force sw7 0
