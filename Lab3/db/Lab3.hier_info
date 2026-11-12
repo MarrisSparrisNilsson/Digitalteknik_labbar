@@ -1,0 +1,21 @@
+|top_level
+clock_50 => led.CLK
+clock_50 => tick.CLK
+clock_50 => counter[0].CLK
+clock_50 => counter[1].CLK
+clock_50 => counter[2].CLK
+clock_50 => counter[3].CLK
+clock_50 => counter[4].CLK
+key_n[0] => tick.ACLR
+key_n[0] => counter[0].ACLR
+key_n[0] => counter[1].ACLR
+key_n[0] => counter[2].ACLR
+key_n[0] => counter[3].ACLR
+key_n[0] => counter[4].ACLR
+key_n[0] => led.ACLR
+key_n[1] => ~NO_FANOUT~
+key_n[2] => ~NO_FANOUT~
+key_n[3] => ~NO_FANOUT~
+ledr <= led.DB_MAX_OUTPUT_PORT_TYPE
+
+
