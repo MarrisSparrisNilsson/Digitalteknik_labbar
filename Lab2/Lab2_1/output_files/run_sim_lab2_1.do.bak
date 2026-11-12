@@ -1,0 +1,62 @@
+restart -f
+
+force sw(0) 0
+force sw(1) 0
+force sw(2) 0
+force sw(3) 0
+force sw(4) 0
+force sw(5) 0
+force key_n(3) 0
+force key_n(2) 0
+force key_n(1) 1
+force key_n(0) 0
+
+run 10 ns
+
+force sw(0) 1
+force sw(3) 1
+run 10 ns
+
+force key_n(0) 1
+run 10 ns
+
+force key_n(0) 0
+run 10 ns
+
+
+force sw(1) 1
+force sw(2) 1
+force sw(3) 1
+force sw(4) 1
+run 10 ns
+
+force key_n(0) 1
+run 10 ns
+
+force key_n(0) 0
+run 10 ns
+
+
+force sw(0) 0
+force sw(5) 1
+run 10 ns
+
+force key_n(0) 1
+run 10 ns
+
+force key_n(0) 0
+run 10 ns
+
+force key_n(1) 0
+force sw(2) 1
+force sw(5) 1
+run 10 ns
+
+force key_n(1) 1
+run 10 ns
+
+force key_n(0) 1
+run 10 ns
+
+force key_n(0) 0
+run 10 ns

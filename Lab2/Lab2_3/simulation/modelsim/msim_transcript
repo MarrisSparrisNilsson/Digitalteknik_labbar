@@ -1,0 +1,44 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Lab2_3_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/marti/JU/Digitalteknik/Labbar/Lab2/Lab2_3/top_level.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top_level
+# -- Compiling architecture rtl of top_level
+# 
+vsim work.top_level
+# vsim work.top_level 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.top_level(rtl)
+add wave -position end  sim:/top_level/a
+add wave -position end  sim:/top_level/b
+add wave -position end  sim:/top_level/key_n
+add wave -position end  sim:/top_level/ledr
+add wave -position end  sim:/top_level/clk
+add wave -position end  sim:/top_level/reset_n
+restart -f
+do ../../output_files/run_sim_lab2_3.txt
+restart -f
+do ../../output_files/run_sim_lab2_3.txt
+restart -f
+do ../../output_files/run_sim_lab2_3.txt
+restart -f
+do ../../output_files/run_sim_lab2_3.txt
+do ../../output_files/run_sim_lab2_3.txt
+do ../../output_files/run_sim_lab2_3.txt

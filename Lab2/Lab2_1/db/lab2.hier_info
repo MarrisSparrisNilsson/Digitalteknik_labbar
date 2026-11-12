@@ -1,0 +1,23 @@
+|top_level
+sw[0] => Add0.IN3
+sw[1] => Add0.IN2
+sw[2] => Add0.IN1
+sw[3] => Add0.IN6
+sw[4] => Add0.IN5
+sw[5] => Add0.IN4
+key_n[0] => ledr[0]~reg0.CLK
+key_n[0] => ledr[1]~reg0.CLK
+key_n[0] => ledr[2]~reg0.CLK
+key_n[0] => ledr[3]~reg0.CLK
+key_n[1] => ledr[0]~reg0.ACLR
+key_n[1] => ledr[1]~reg0.ACLR
+key_n[1] => ledr[2]~reg0.ACLR
+key_n[1] => ledr[3]~reg0.ACLR
+key_n[2] => ~NO_FANOUT~
+key_n[3] => ~NO_FANOUT~
+ledr[0] <= ledr[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ledr[1] <= ledr[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ledr[2] <= ledr[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ledr[3] <= ledr[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

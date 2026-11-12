@@ -1,0 +1,44 @@
+restart -f
+
+run 10 ns
+force a "0000"
+force b "0000"
+force key_n(0) 0
+force key_n(1) 1
+run 1 ns
+
+
+force a "0100"
+force b "0010"
+run 10 ns
+
+force key_n(0) 1
+run 10 ns
+
+
+
+force key_n(0) 0
+run 10 ns
+
+force a "0100"
+force b "0110"
+run 10 ns
+
+force key_n(0) 1
+run 10 ns
+
+
+force key_n(0) 0
+run 10 ns
+
+force a "1010"
+force b "1010"
+run 10 ns
+
+force key_n(0) 1
+run 10 ns
+
+force key_n(1) 0
+run 10 ns
+
+
